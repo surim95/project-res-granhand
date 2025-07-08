@@ -51,15 +51,20 @@ main .wrap {}
 }
 .wrap .shop .shop_container .slide_wrap .product_wrap {}
 .wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper {
+    width: 1128px; height: 479px;
     display: flex; gap: 34px;
 }
 .wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper{
     display: flex; gap: 90px;
 }
+.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper {}
 .wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide{
     width: 316px;
-    display: block;
-    position: relative;
+    display: inline-block; position: relative;
+}
+.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide > p{
+    font-size: 0.875rem; line-height: 1.4; color: #aaa;
+    text-align: right; position: absolute; right: 0; bottom: 0;
 }
 .wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .thumnail{
     margin-bottom: 4px;
@@ -72,40 +77,82 @@ main .wrap {}
 .wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .product_name p{
     font-size: 0.875rem;
 }
-.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide > p{
-    font-size: 0.875rem; line-height: 1.4; color: #aaa;
-    text-align: right; position: absolute; right: 0; bottom: 0;
-}
 .wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-scrollbar{}
-.wrap .shop .shop_container .product_wrap .swiper-button-next{
-    border: 1px solid red;
-    margin: 70px auto 0;
-}
-.wrap .shop .shop_container .product_wrap .swiper-button-next img{}
+.wrap .shop .shop_container .product_wrap .swiper-button-next{}
 /* 세번째 section */
-.wrap .set {}
+.wrap .set {
+    display: flex;
+}
 .wrap .set .set_bnr{
     width: 50%; height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../images/img_bnr.jpg);
     background-position: center;
     background-size: cover;
+    display: flex; justify-content: space-between;
+    padding: 40px;
+    position: relative;
 }
 .wrap .set .set_bnr .left_wrap{}
-.wrap .set .set_bnr .left_wrap h2{}
+.wrap .set .set_bnr .left_wrap h2{
+    font-family: 'SunBatang-Light'; font-size: 1.875rem;
+    color: #fff;
+}
+.wrap .set .set_bnr .left_wrap > a {
+    width: 60px; height: 60px;
+    position: absolute;
+    bottom: 40px; left: 50%; transform: translateX(-50%);
+}
+.wrap .set .set_bnr .left_wrap > a img {}
 .wrap .set .set_bnr .right_wrap{}
-.wrap .set .set_bnr .right_wrap p{}
-.wrap .set .set_bnr > a {}
-.wrap .set .set_bnr > a img {}
+.wrap .set .set_bnr .right_wrap p:nth-child(1){
+    margin-bottom: 10px;
+}
+.wrap .set .set_bnr .right_wrap p{
+    text-align: right; color: #fff;
+    font-size: 0.875rem; line-height: 1.4;
+    font-weight: 300;
+}
 .wrap .set .set_slide{}
 .wrap .set .set_slide .swiper-button-prev{}
-.wrap .set .set_slide .swiper-wrapper{}
-.wrap .set .set_slide .swiper-wrapper .swiper-slide{}
+.wrap .set .set_slide .swiper-wrapper{
+    display: flex;
+}
+.wrap .set .set_slide .swiper-wrapper .swiper-slide{
+    position: relative;
+}
 .wrap .set .set_slide .swiper-wrapper .swiper-slide .gift_product{}
 .wrap .set .set_slide .swiper-wrapper .swiper-slide .gift_product .gift_img{}
 .wrap .set .set_slide .swiper-wrapper .swiper-slide .gift_product .gift_img img{}
-.wrap .set .set_slide .swiper-wrapper .swiper-slide .gift_product h2{}
-.wrap .set .set_slide .swiper-wrapper .swiper-slide .gift_product h3{}
-.wrap .set .set_slide .swiper-wrapper .swiper-slide .gift_product p{}
-.wrap .set .set_slide .swiper-wrapper .swiper-slide > a{}
+.wrap .set .set_slide .swiper-wrapper .swiper-slide .gift_product h2{
+    font-size: 1.125rem; font-weight: 600;
+    margin-bottom: 3px;
+}
+.wrap .set .set_slide .swiper-wrapper .swiper-slide .gift_product h3{
+    font-size: 0.875rem;
+    margin-bottom: 12px;
+}
+.wrap .set .set_slide .swiper-wrapper .swiper-slide .gift_product p{
+    font-size: 0.875rem;
+    line-height: 1.4; color: #aaa;
+}
+.wrap .set .set_slide .swiper-wrapper .swiper-slide > a:last-child{
+    font-size: 0.75rem; color: #aaa;
+    display: flex; align-items: center;
+    position: absolute; bottom: 0; right: 0;
+}
 .wrap .set .set_slide .swiper-wrapper .swiper-slide > a img{}
 .wrap .set .set_slide .swiper-button-next{}
+/* 네번째 section */
+.wrap .journal {}
+.wrap .journal .journal_wrap{}
+.wrap .journal .journal_wrap .juournal_filter{}
+.wrap .journal .journal_wrap .juournal_filter li{}
+.wrap .journal .journal_wrap .juournal_filter li a{}
+.wrap .journal .journal_wrap .juournal_filter li.journal_act{}
+.wrap .journal .journal_wrap .journal_contents{}
+.wrap .journal .journal_wrap .journal_contents .journal_img{}
+.wrap .journal .journal_wrap .journal_contents .journal_img .swiper-button-prev{}
+.wrap .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper{}
+.wrap .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .swiper-slide{}
+.wrap .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .swiper-slide a {}
+.wrap .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .swiper-slide a img{}

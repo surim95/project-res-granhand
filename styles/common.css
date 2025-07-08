@@ -1,6 +1,7 @@
 body {
     width: 100%;
     position: relative;
+    transition: all 0.3s;
 }
 header {
     width: 100%;
@@ -37,12 +38,16 @@ header .head_wrap .logo h1 a img {}
 header .head_wrap .right_wrap {
     display: flex; gap: 20px;
 }
-header .head_wrap .right_wrap > a {}
+header .head_wrap .right_wrap > a {
+    width: 22px; height: 22px;
+}
 header .head_wrap .right_wrap > a img {}
 header .head_wrap .right_wrap .lang_wrap {
     position: relative;
 }
-header .head_wrap .right_wrap .lang_wrap #lang_btn {}
+header .head_wrap .right_wrap .lang_wrap #lang_btn {
+    width: 36px; height: 24px;
+}
 header .head_wrap .right_wrap .lang_wrap #lang_btn img:nth-child(1) {}
 header .head_wrap .right_wrap .lang_wrap #lang_btn img:nth-child(2) {}
 header .head_wrap .right_wrap .lang_wrap .lang_select {
