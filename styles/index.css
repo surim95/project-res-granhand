@@ -16,9 +16,8 @@ main .wrap {}
     padding: 120px 0;
 }
 .wrap .shop .shop_container {
-    width: calc((1440 / 1920) * 100%);
+    width: 1440px;
     margin: 0 auto;
-    border: 1px solid red;
 }
 .wrap .shop .shop_container .slide_wrap{
     display: flex; justify-content: space-between;
@@ -51,30 +50,32 @@ main .wrap {}
 }
 .wrap .shop .shop_container .slide_wrap .product_wrap {}
 .wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper {
-    width: 1128px; height: 479px;
+    width: 1128px;
     display: flex; gap: 34px;
 }
 .wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper{
     display: flex; gap: 90px;
 }
-.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper {}
 .wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide{
     width: 316px;
-    display: inline-block; position: relative;
+    position: relative;
 }
-.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide > p{
+.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide a {}
+.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide a > p{
     font-size: 0.875rem; line-height: 1.4; color: #aaa;
     text-align: right; position: absolute; right: 0; bottom: 0;
 }
-.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .thumnail{
+.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide a .thumnail{
     margin-bottom: 4px;
 }
-.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .thumnail img{width: 100%;}
-.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .product_name{}
-.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .product_name h2{
+.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide a .thumnail img{
+    width: 100%;
+}
+.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide a .product_name{}
+.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide a .product_name h2{
     font-size: 1.125rem; font-weight: 600; margin-bottom: 3px;
 }
-.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .product_name p{
+.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide a .product_name p{
     font-size: 0.875rem;
 }
 .wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-scrollbar{}
