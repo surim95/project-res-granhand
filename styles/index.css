@@ -1,6 +1,6 @@
-section {background: yellow; border-bottom: 1px solid red;}
 main {}
 main .wrap {}
+/* 첫번째 section */
 .wrap .main_title {
     width: 100%;
     position: relative;
@@ -10,3 +10,102 @@ main .wrap {}
     height: 100vh;
     position: relative;
 }
+/* 두번째 section */
+.wrap .shop {
+    background: #FDFBF4;
+    padding: 120px 0;
+}
+.wrap .shop .shop_container {
+    width: calc((1440 / 1920) * 100%);
+    margin: 0 auto;
+    border: 1px solid red;
+}
+.wrap .shop .shop_container .slide_wrap{
+    display: flex; justify-content: space-between;
+}
+.wrap .shop .shop_container .slide_wrap .filter{
+    padding-top: 100px;
+}
+.wrap .shop .shop_container .slide_wrap .filter li{
+    margin-bottom: 12px;
+}
+.wrap .shop .shop_container .slide_wrap .filter li:last-child {
+    margin-bottom: 0;
+}
+.wrap .shop .shop_container .slide_wrap .filter li.active_filter a{
+    font-size: 1.75rem;
+    font-family: 'SunBatang-Bold';
+    text-decoration: 1px underline;
+}
+.wrap .shop .shop_container .slide_wrap .filter li.active_filter a img {display: inline;}
+.wrap .shop .shop_container .slide_wrap .filter li a{
+    width: max-content;
+    display: flex; align-items:end;
+    font-size: 1.125rem;
+    font-family: 'SunBatang-Medium';
+    gap: 6px;
+}
+.wrap .shop .shop_container .slide_wrap .filter li a img{
+    width: 20px; height: 20px;
+    display: none; margin-bottom: 4px;
+}
+.wrap .shop .shop_container .slide_wrap .product_wrap {}
+.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper {
+    display: flex; gap: 34px;
+}
+.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper{
+    display: flex; gap: 90px;
+}
+.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide{
+    width: 316px;
+    display: block;
+    position: relative;
+}
+.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .thumnail{
+    margin-bottom: 4px;
+}
+.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .thumnail img{width: 100%;}
+.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .product_name{}
+.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .product_name h2{
+    font-size: 1.125rem; font-weight: 600; margin-bottom: 3px;
+}
+.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .product_name p{
+    font-size: 0.875rem;
+}
+.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide > p{
+    font-size: 0.875rem; line-height: 1.4; color: #aaa;
+    text-align: right; position: absolute; right: 0; bottom: 0;
+}
+.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-scrollbar{}
+.wrap .shop .shop_container .product_wrap .swiper-button-next{
+    border: 1px solid red;
+    margin: 70px auto 0;
+}
+.wrap .shop .shop_container .product_wrap .swiper-button-next img{}
+/* 세번째 section */
+.wrap .set {}
+.wrap .set .set_bnr{
+    width: 50%; height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../images/img_bnr.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.wrap .set .set_bnr .left_wrap{}
+.wrap .set .set_bnr .left_wrap h2{}
+.wrap .set .set_bnr .right_wrap{}
+.wrap .set .set_bnr .right_wrap p{}
+.wrap .set .set_bnr > a {}
+.wrap .set .set_bnr > a img {}
+.wrap .set .set_slide{}
+.wrap .set .set_slide .swiper-button-prev{}
+.wrap .set .set_slide .swiper-wrapper{}
+.wrap .set .set_slide .swiper-wrapper .swiper-slide{}
+.wrap .set .set_slide .swiper-wrapper .swiper-slide .gift_product{}
+.wrap .set .set_slide .swiper-wrapper .swiper-slide .gift_product .gift_img{}
+.wrap .set .set_slide .swiper-wrapper .swiper-slide .gift_product .gift_img img{}
+.wrap .set .set_slide .swiper-wrapper .swiper-slide .gift_product h2{}
+.wrap .set .set_slide .swiper-wrapper .swiper-slide .gift_product h3{}
+.wrap .set .set_slide .swiper-wrapper .swiper-slide .gift_product p{}
+.wrap .set .set_slide .swiper-wrapper .swiper-slide > a{}
+.wrap .set .set_slide .swiper-wrapper .swiper-slide > a img{}
+.wrap .set .set_slide .swiper-button-next{}

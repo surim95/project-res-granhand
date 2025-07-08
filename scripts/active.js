@@ -1,0 +1,70 @@
+/* 언어 설정 */
+const langBtn = document.querySelector('#lang_btn');
+const langOption = document.querySelector('.lang_wrap .lang_select');
+const langOptionText = document.querySelectorAll('.lang_wrap .lang_select a');
+const langArrow = document.querySelector('#lang_btn .lang_arrow');
+console.log(langBtn, langOption, langArrow, langOptionText)
+
+let langBtnStatus = false;
+
+langBtn.addEventListener('click',()=>{
+    if (langBtnStatus) {
+        langOption.style.display = 'none';
+        langBtnStatus = false;
+        langArrow.style.transform = 'scaleY(1)';
+        
+    } else {
+        langOption.style.display = 'flex';
+        langBtnStatus = true;
+        langArrow.style.transform = 'scaleY(-1)';
+    }
+})
+/* gnb 설정 */
+const gnbText = document.querySelectorAll('.head_wrap .gnb li a');
+const logoImg = document.querySelector('.logo h1 a img');
+const headerLine = document.querySelector('.head_wrap');
+const iconImg = document.querySelectorAll('.right_wrap a img');
+console.log(gnbText, logoImg, headerLine, iconImg);
+const header = document.querySelector('header');
+
+gnbText.forEach((gnbTextAdd)=>{
+    gnbTextAdd.addEventListener('mouseover',()=>{
+        gnbTextAdd.style.textDecoration = 'underline';
+    })
+    gnbTextAdd.addEventListener('mouseout',()=>{
+        gnbTextAdd.style.textDecoration = 'none';
+    })
+    /* 스크롤 위치에 따른 헤더 색상 반전 */
+    window.addEventListener('scroll',()=>{
+        //console.log(window.scrollY);
+        if (window.scrollY > 840) {
+            gnbTextAdd.style.color = '#000';
+            logoImg.src = './images/logo_b.png';
+            headerLine.style.borderBottom = '1px solid #000';
+            headerLine.style.background = 'rgba(0, 0, 0, 0)';
+            iconImg.forEach((iconImgInvert)=>{iconImgInvert.style.filter = 'invert(1)'});
+            langBtn.style.filter = 'invert(1)';
+            langOption.style.background = 'rgba(256, 256, 256, 0.4)';
+            langOption.style.border = '1px solid #000';
+            langOptionText.forEach((langText)=>{langText.style.color = '#000';})
+        } else {
+            gnbTextAdd.style.color = '#fff';
+            logoImg.src = './images/logo_w.png';
+            headerLine.style.borderBottom = '1px solid #fff';
+            headerLine.style.background = 'rgba(0, 0, 0, 0.2)';
+            iconImg.forEach((iconImgInvert)=>{iconImgInvert.style.filter = 'invert(0)'});
+            langBtn.style.filter = 'invert(0)';
+            langOption.style.background = 'rgba(0, 0, 0, 0.8)';
+            langOption.style.border = '1px solid #fff';
+            langOptionText.forEach((langText)=>{langText.style.color = '#fff';})
+        }
+        if (window.scrollY > 1785 && window.scrollY < 2707) {
+            header.style.display = 'none';
+        } else if (window.scrollY < 1785 || window.scrollY > 2707) {
+            header.style.display = 'block';
+        }
+    });
+});
+/* 헤더 스크롤 이벤트 */
+
+
