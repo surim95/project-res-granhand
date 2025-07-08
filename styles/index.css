@@ -1,0 +1,12 @@
+section {background: yellow; border-bottom: 1px solid red;}
+main {}
+main .wrap {}
+.wrap .main_title {
+    width: 100%;
+    position: relative;
+}
+.wrap .main_title iframe {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
