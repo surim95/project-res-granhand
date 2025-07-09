@@ -1,90 +1,90 @@
-main {}
-main .wrap {}
+.wrap {}
+.wrap main {}
 /* 첫번째 section */
-.wrap .main_title {
+main .main_title {
     width: 100%;
     position: relative;
 }
-.wrap .main_title iframe {
+main .main_title iframe {
     width: 100%;
     height: 100vh;
     position: relative;
 }
 /* 두번째 section */
-.wrap .shop {
+main .shop {
     background: #FDFBF4;
     padding: 120px 0;
 }
-.wrap .shop .shop_container {
+main .shop .shop_container {
     width: 1440px;
     margin: 0 auto;
 }
-.wrap .shop .shop_container .slide_wrap{
+main .shop .shop_container .slide_wrap{
     display: flex; justify-content: space-between;
 }
-.wrap .shop .shop_container .slide_wrap .filter{
+main .shop .shop_container .slide_wrap .filter{
     padding-top: 100px;
 }
-.wrap .shop .shop_container .slide_wrap .filter li{
+main .shop .shop_container .slide_wrap .filter li{
     margin-bottom: 12px;
 }
-.wrap .shop .shop_container .slide_wrap .filter li:last-child {
+main .shop .shop_container .slide_wrap .filter li:last-child {
     margin-bottom: 0;
 }
-.wrap .shop .shop_container .slide_wrap .filter li.active_filter a{
+main .shop .shop_container .slide_wrap .filter li.active_filter a{
     font-size: 1.75rem;
     font-family: 'SunBatang-Bold';
     text-decoration: 1px underline;
 }
-.wrap .shop .shop_container .slide_wrap .filter li.active_filter a img {display: inline;}
-.wrap .shop .shop_container .slide_wrap .filter li a{
+main .shop .shop_container .slide_wrap .filter li.active_filter a img {display: inline;}
+main .shop .shop_container .slide_wrap .filter li a{
     width: max-content;
     display: flex; align-items:end;
     font-size: 1.125rem;
     font-family: 'SunBatang-Medium';
     gap: 6px;
 }
-.wrap .shop .shop_container .slide_wrap .filter li a img{
+main .shop .shop_container .slide_wrap .filter li a img{
     width: 20px; height: 20px;
     display: none; margin-bottom: 4px;
 }
-.wrap .shop .shop_container .slide_wrap .product_wrap {}
-.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper {
+main .shop .shop_container .slide_wrap .product_wrap {}
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper {
     width: 1128px;
     display: flex; gap: 34px;
 }
-.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper{
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper{
     display: flex; gap: 90px;
 }
-.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide{
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide{
     width: 316px;
     position: relative;
 }
-.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide a {}
-.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide a > p{
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide a {}
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide a > p{
     font-size: 0.875rem; line-height: 1.4; color: #aaa;
     text-align: right; position: absolute; right: 0; bottom: 0;
 }
-.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide a .thumnail{
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide a .thumnail{
     margin-bottom: 4px;
 }
-.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide a .thumnail img{
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide a .thumnail img{
     width: 100%;
 }
-.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide a .product_name{}
-.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide a .product_name h2{
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide a .product_name{}
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide a .product_name h2{
     font-size: 1.125rem; font-weight: 600; margin-bottom: 3px;
 }
-.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide a .product_name p{
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide a .product_name p{
     font-size: 0.875rem;
 }
-.wrap .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-scrollbar{}
-.wrap .shop .shop_container .product_wrap .swiper-button-next{}
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-scrollbar{}
+main .shop .shop_container .product_wrap .swiper-button-next{}
 /* 세번째 section */
-.wrap .set {
+main .set {
     display: flex;
 }
-.wrap .set .set_bnr{
+main .set .set_bnr{
     width: 50%; height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../images/img_bnr.jpg);
     background-position: center;
@@ -93,67 +93,67 @@ main .wrap {}
     padding: 40px;
     position: relative;
 }
-.wrap .set .set_bnr .left_wrap{}
-.wrap .set .set_bnr .left_wrap h2{
+main .set .set_bnr .left_wrap{}
+main .set .set_bnr .left_wrap h2{
     font-family: 'SunBatang-Light'; font-size: 1.875rem;
     color: #fff;
 }
-.wrap .set .set_bnr .left_wrap > a {
+main .set .set_bnr .left_wrap > a {
     width: 60px; height: 60px;
     position: absolute;
     bottom: 40px; left: 50%; transform: translateX(-50%);
 }
-.wrap .set .set_bnr .left_wrap > a img {}
-.wrap .set .set_bnr .right_wrap{}
-.wrap .set .set_bnr .right_wrap p:nth-child(1){
+main .set .set_bnr .left_wrap > a img {}
+main .set .set_bnr .right_wrap{}
+main .set .set_bnr .right_wrap p:nth-child(1){
     margin-bottom: 10px;
 }
-.wrap .set .set_bnr .right_wrap p{
+main .set .set_bnr .right_wrap p{
     text-align: right; color: #fff;
     font-size: 0.875rem; line-height: 1.4;
     font-weight: 300;
 }
-.wrap .set .set_slide{}
-.wrap .set .set_slide .swiper-button-prev{}
-.wrap .set .set_slide .swiper-wrapper{
+main .set .set_slide{}
+main .set .set_slide .swiper-button-prev{}
+main .set .set_slide .swiper-wrapper{
     display: flex;
 }
-.wrap .set .set_slide .swiper-wrapper .swiper-slide{
+main .set .set_slide .swiper-wrapper .swiper-slide{
     position: relative;
 }
-.wrap .set .set_slide .swiper-wrapper .swiper-slide .gift_product{}
-.wrap .set .set_slide .swiper-wrapper .swiper-slide .gift_product .gift_img{}
-.wrap .set .set_slide .swiper-wrapper .swiper-slide .gift_product .gift_img img{}
-.wrap .set .set_slide .swiper-wrapper .swiper-slide .gift_product h2{
+main .set .set_slide .swiper-wrapper .swiper-slide .gift_product{}
+main .set .set_slide .swiper-wrapper .swiper-slide .gift_product .gift_img{}
+main .set .set_slide .swiper-wrapper .swiper-slide .gift_product .gift_img img{}
+main .set .set_slide .swiper-wrapper .swiper-slide .gift_product h2{
     font-size: 1.125rem; font-weight: 600;
     margin-bottom: 3px;
 }
-.wrap .set .set_slide .swiper-wrapper .swiper-slide .gift_product h3{
+main .set .set_slide .swiper-wrapper .swiper-slide .gift_product h3{
     font-size: 0.875rem;
     margin-bottom: 12px;
 }
-.wrap .set .set_slide .swiper-wrapper .swiper-slide .gift_product p{
+main .set .set_slide .swiper-wrapper .swiper-slide .gift_product p{
     font-size: 0.875rem;
     line-height: 1.4; color: #aaa;
 }
-.wrap .set .set_slide .swiper-wrapper .swiper-slide > a:last-child{
+main .set .set_slide .swiper-wrapper .swiper-slide > a:last-child{
     font-size: 0.75rem; color: #aaa;
     display: flex; align-items: center;
     position: absolute; bottom: 0; right: 0;
 }
-.wrap .set .set_slide .swiper-wrapper .swiper-slide > a img{}
-.wrap .set .set_slide .swiper-button-next{}
+main .set .set_slide .swiper-wrapper .swiper-slide > a img{}
+main .set .set_slide .swiper-button-next{}
 /* 네번째 section */
-.wrap .journal {}
-.wrap .journal .journal_wrap{}
-.wrap .journal .journal_wrap .juournal_filter{}
-.wrap .journal .journal_wrap .juournal_filter li{}
-.wrap .journal .journal_wrap .juournal_filter li a{}
-.wrap .journal .journal_wrap .juournal_filter li.journal_act{}
-.wrap .journal .journal_wrap .journal_contents{}
-.wrap .journal .journal_wrap .journal_contents .journal_img{}
-.wrap .journal .journal_wrap .journal_contents .journal_img .swiper-button-prev{}
-.wrap .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper{}
-.wrap .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .swiper-slide{}
-.wrap .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .swiper-slide a {}
-.wrap .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .swiper-slide a img{}
+main .journal {}
+main .journal .journal_wrap{}
+main .journal .journal_wrap .juournal_filter{}
+main .journal .journal_wrap .juournal_filter li{}
+main .journal .journal_wrap .juournal_filter li a{}
+main .journal .journal_wrap .juournal_filter li.journal_act{}
+main .journal .journal_wrap .journal_contents{}
+main .journal .journal_wrap .journal_contents .journal_img{}
+main .journal .journal_wrap .journal_contents .journal_img .swiper-button-prev{}
+main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper{}
+main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .swiper-slide{}
+main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .swiper-slide a {}
+main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .swiper-slide a img{}
