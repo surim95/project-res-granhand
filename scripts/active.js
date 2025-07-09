@@ -1,3 +1,11 @@
+document.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', function(e) {
+        if (a.getAttribute('href') === '#') {
+            e.preventDefault();
+        }
+    });
+});
+
 /* 언어 설정 */
 const langBtn = document.querySelector('#lang_btn');
 const langOption = document.querySelector('.lang_wrap .lang_select');
@@ -44,7 +52,7 @@ gnbText.forEach((gnbTextAdd)=>{
             headerLine.style.background = 'rgba(0, 0, 0, 0)';
             iconImg.forEach((iconImgInvert)=>{iconImgInvert.style.filter = 'invert(1)'});
             langBtn.style.filter = 'invert(1)';
-            langOption.style.background = 'rgba(256, 256, 256, 0.4)';
+            langOption.style.background = 'rgba(255, 255, 255, 1)';
             langOption.style.border = '1px solid #000';
             langOptionText.forEach((langText)=>{langText.style.color = '#000';})
         } else {
@@ -67,4 +75,64 @@ gnbText.forEach((gnbTextAdd)=>{
 });
 /* 헤더 스크롤 이벤트 */
 
+/* filter 그라디언트 */
+const defaultFilter = document.querySelectorAll('.filter li a');
+const filter = document.querySelector('.filter');
+console.log(defaultFilter, filter);
+
+defaultFilter.forEach((filterActive)=>{
+    filterActive.addEventListener('click',()=>{
+        defaultFilter.forEach((del)=>{
+            del.classList.remove('active_filter');
+        })
+        filterActive.classList.toggle('active_filter');
+        gradientText();
+    })
+})
+
+function gradientText(){
+    if (defaultFilter[0].classList.contains('active_filter')){
+        filter.classList.add('filter_gradient1');
+        filter.classList.remove('filter_gradient2');
+        filter.classList.remove('filter_gradient3');
+        filter.classList.remove('filter_gradient4');
+        filter.classList.remove('filter_gradient5');
+        filter.classList.remove('filter_gradient6');
+    } else if (defaultFilter[1].classList.contains('active_filter')) {
+        filter.classList.add('filter_gradient2');
+        filter.classList.remove('filter_gradient1');
+        filter.classList.remove('filter_gradient3');
+        filter.classList.remove('filter_gradient4');
+        filter.classList.remove('filter_gradient5');
+        filter.classList.remove('filter_gradient6');
+    } else if (defaultFilter[2].classList.contains('active_filter')) {
+        filter.classList.add('filter_gradient3');
+        filter.classList.remove('filter_gradient1');
+        filter.classList.remove('filter_gradient2');
+        filter.classList.remove('filter_gradient4');
+        filter.classList.remove('filter_gradient5');
+        filter.classList.remove('filter_gradient6');
+    } else if (defaultFilter[3].classList.contains('active_filter')) {
+        filter.classList.add('filter_gradient4');
+        filter.classList.remove('filter_gradient1');
+        filter.classList.remove('filter_gradient2');
+        filter.classList.remove('filter_gradient3');
+        filter.classList.remove('filter_gradient5');
+        filter.classList.remove('filter_gradient6');
+    } else if (defaultFilter[4].classList.contains('active_filter')) {
+        filter.classList.add('filter_gradient5');
+        filter.classList.remove('filter_gradient1');
+        filter.classList.remove('filter_gradient2');
+        filter.classList.remove('filter_gradient3');
+        filter.classList.remove('filter_gradient4');
+        filter.classList.remove('filter_gradient6');
+    } else {
+        filter.classList.add('filter_gradient6');
+        filter.classList.remove('filter_gradient1');
+        filter.classList.remove('filter_gradient2');
+        filter.classList.remove('filter_gradient3');
+        filter.classList.remove('filter_gradient4');
+        filter.classList.remove('filter_gradient5');
+    }
+}
 

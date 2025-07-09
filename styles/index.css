@@ -1,8 +1,9 @@
 main {}
 /* 첫번째 section */
 main .main_title {
-    width: 100%;
+    width: 100%; 
     position: relative;
+    background: #FDFBF4;
 }
 main .main_title iframe {
     width: 100%;
@@ -24,18 +25,56 @@ main .shop .shop_container .slide_wrap{
 main .shop .shop_container .slide_wrap .filter{
     padding-top: 100px;
 }
+/* filter gradient 개별 class */
+.filter_gradient1 {
+    background: linear-gradient(rgba(255,255,255,0) 0%, rgba(0,0,0,1) 15%,rgba(255,255,255,0) 65%);
+    background-clip: text; color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.filter_gradient2 {
+    background: linear-gradient(rgba(255,255,255,0) 5%, rgba(0,0,0,1) 30%,rgba(255,255,255,0) 70%);
+    background-clip: text; color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.filter_gradient3 {
+    background: linear-gradient(rgba(255,255,255,0) 8%, rgba(0,0,0,1) 40% ,rgba(255,255,255,0) 65%);
+    background-clip: text; color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.filter_gradient4 {
+    background: linear-gradient(rgba(255,255,255,0) 10%, rgba(0,0,0,1) 45%,rgba(255,255,255,0) 65%);
+    background-clip: text; color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.filter_gradient5 {
+    background: linear-gradient(rgba(255,255,255,0) 12%, rgba(0,0,0,1) 55%,rgba(255,255,255,0) 75%);
+    background-clip: text; color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.filter_gradient6 {
+    background: linear-gradient(rgba(255,255,255,0) 15%, rgba(0,0,0,1) 60%,rgba(255,255,255,0) 95%);
+    background-clip: text; color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* class 끝 */
 main .shop .shop_container .slide_wrap .filter li{
     margin-bottom: 12px;
 }
 main .shop .shop_container .slide_wrap .filter li:last-child {
     margin-bottom: 0;
 }
-main .shop .shop_container .slide_wrap .filter li.active_filter a{
+main .shop .shop_container .slide_wrap .filter li a.active_filter{
     font-size: 1.75rem;
     font-family: 'SunBatang-Bold';
     text-decoration: 1px underline;
 }
-main .shop .shop_container .slide_wrap .filter li.active_filter a img {display: inline;}
+main .shop .shop_container .slide_wrap .filter li a.active_filter img {display: inline;}
 main .shop .shop_container .slide_wrap .filter li a{
     width: max-content;
     display: flex; align-items:end;
@@ -53,9 +92,12 @@ main .shop .shop_container .slide_wrap .product_wrap .product_swiper {
     display: flex; gap: 34px;
 }
 main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper{
+    height: 479px; overflow: visible;
+}
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide {
     display: flex; gap: 90px;
 }
-main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide{
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .product{
     width: 316px;
     position: relative;
 }
