@@ -1,6 +1,8 @@
 body {
     width: 100%;
     position: relative;
+}
+body * {
     transition: all 0.3s;
 }
 header {
@@ -41,12 +43,18 @@ header .head_wrap .right_wrap {
 header .head_wrap .right_wrap > a {
     width: 22px; height: 22px;
 }
+header .head_wrap .right_wrap > a:hover img {
+    filter:brightness(0.5) !important;
+}
 header .head_wrap .right_wrap > a img {}
 header .head_wrap .right_wrap .lang_wrap {
     position: relative;
 }
 header .head_wrap .right_wrap .lang_wrap #lang_btn {
     width: 36px; height: 24px;
+}
+header .head_wrap .right_wrap .lang_wrap #lang_btn:hover {
+    filter:brightness(0.5) !important;
 }
 header .head_wrap .right_wrap .lang_wrap #lang_btn img:nth-child(1) {}
 header .head_wrap .right_wrap .lang_wrap #lang_btn img:nth-child(2) {}

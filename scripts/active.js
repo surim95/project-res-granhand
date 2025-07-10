@@ -1,3 +1,4 @@
+
 document.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', function(e) {
         if (a.getAttribute('href') === '#') {
@@ -27,6 +28,8 @@ langBtn.addEventListener('click',()=>{
         langArrow.style.transform = 'scaleY(-1)';
     }
 })
+
+
 /* gnb 설정 */
 const gnbText = document.querySelectorAll('.head_wrap .gnb li a');
 const logoImg = document.querySelector('.logo h1 a img');
@@ -44,14 +47,14 @@ gnbText.forEach((gnbTextAdd)=>{
     })
     /* 스크롤 위치에 따른 헤더 색상 반전 */
     window.addEventListener('scroll',()=>{
-        //console.log(window.scrollY);
+        console.log(window.scrollY);
         if (window.scrollY > 840) {
             gnbTextAdd.style.color = '#000';
             logoImg.src = './images/logo_b.png';
             headerLine.style.borderBottom = '1px solid #000';
             headerLine.style.background = 'rgba(0, 0, 0, 0)';
-            iconImg.forEach((iconImgInvert)=>{iconImgInvert.style.filter = 'invert(1)'});
-            langBtn.style.filter = 'invert(1)';
+            iconImg.forEach((iconImgInvert)=>{iconImgInvert.style.filter = 'brightness(0)'});
+            langBtn.style.filter = 'brightness(0)';
             langOption.style.background = 'rgba(255, 255, 255, 1)';
             langOption.style.border = '1px solid #000';
             langOptionText.forEach((langText)=>{langText.style.color = '#000';})
@@ -60,17 +63,17 @@ gnbText.forEach((gnbTextAdd)=>{
             logoImg.src = './images/logo_w.png';
             headerLine.style.borderBottom = '1px solid #fff';
             headerLine.style.background = 'rgba(0, 0, 0, 0.2)';
-            iconImg.forEach((iconImgInvert)=>{iconImgInvert.style.filter = 'invert(0)'});
-            langBtn.style.filter = 'invert(0)';
+            iconImg.forEach((iconImgInvert)=>{iconImgInvert.style.filter = 'brightness(1)'});
+            langBtn.style.filter = 'brightness(1)';
             langOption.style.background = 'rgba(0, 0, 0, 0.8)';
             langOption.style.border = '1px solid #fff';
             langOptionText.forEach((langText)=>{langText.style.color = '#fff';})
         }
-        if (window.scrollY > 1785 && window.scrollY < 2707) {
+        if ((window.scrollY > 1846 && window.scrollY < 2768) || (window.scrollY > 3850 && window.scrollY < 5014)) {
             header.style.display = 'none';
-        } else if (window.scrollY < 1785 || window.scrollY > 2707) {
+        } else if ((window.scrollY < 1846 || window.scrollY > 2768) || (window.scrollY < 3850 || window.scrollY > 5014)) {
             header.style.display = 'block';
-        }
+        };
     });
 });
 /* 헤더 스크롤 이벤트 */
@@ -160,7 +163,7 @@ perfumeNoteBtn.forEach((btn) => {
             note.style.display = 'none';
             img.style.transform = 'scaleY(1)';
         };
-        setInterval(perfumeNoteTimer, 8000);
+        setInterval(perfumeNoteTimer, 5000);
         function perfumeNoteTimer(){
             note.style.display = 'none';
             img.style.transform = 'scaleY(1)';
@@ -183,3 +186,16 @@ shopCartBtn.forEach((btn)=>{
     })
 });
 
+/* wallpaper 이벤트 */
+const wallPaperFront = document.querySelectorAll('.paper');
+
+wallPaperFront.forEach((paper)=>{
+    paper.addEventListener('mouseover',()=>{
+        const wallPaperBack = paper.querySelector('.back');
+        wallPaperBack.style.opacity = 1;
+    })
+    paper.addEventListener('mouseout',()=>{
+        const wallPaperBack = paper.querySelector('.back');
+        wallPaperBack.style.opacity = 0;
+    })
+})

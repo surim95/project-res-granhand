@@ -12,8 +12,9 @@ main .main_title iframe {
 }
 /* 두번째 section */
 main .shop {
+    height: 100vh;
     background: #FDFBF4;
-    padding: 120px 0;
+    padding: 120px 0 0;
 }
 main .shop .shop_container {
     width: 1440px;
@@ -122,8 +123,6 @@ main .shop .shop_container .slide_wrap .product_wrap .product_category .right_ca
 }
 /* 슬라이드 영역 시작 */
 main .shop .shop_container .slide_wrap .product_wrap .product_swiper {
-    position: relative;
-    border: 1px solid red;
     width: 1166px;
 }
 main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper{
@@ -142,9 +141,13 @@ main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wra
     text-align: right; position: absolute; right: 0; bottom: 0;
 }
 main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .product .pd .thumnail{
+    height: 433px; overflow: hidden;
     margin-bottom: 4px;
 }
 main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .product .pd .thumnail img{}
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .product .pd:hover .thumnail img {
+    transform: scale(1.1);
+}
 main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .product .pd .product_name{}
 main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .product .pd .product_name h2{
     font-size: 1.125rem; font-weight: 600; margin-bottom: 3px;
@@ -186,11 +189,22 @@ main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wra
 main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .product .shop_cart_btn img {}
 /* 슬라이드 영역 끝 */
 /* 슬라이드 스크롤, 버튼 */
-main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-scrollbar{}
-main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-button-next{
-    border: 1px solid red;
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-scrollbar{
+    border-radius: 4px;
+    right: 0;
+}
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-scrollbar .swiper-scrollbar-drag{
+    background: #aaa;
+    border-radius: 4px;
+}
+main .shop .shop_container .slide_wrap .product_wrap .swiper-button-next{
     width: 60px; height: 60px;
     background: url(../images/icon_page_down.png) center / cover;
+    position: static; bottom: 0; margin: 70px auto 0;
+    filter: invert(0.8);
+}
+main .shop .shop_container .slide_wrap .product_wrap .swiper-button-next:hover {
+    filter: invert(0);
 }
 .swiper-button-next:after, .swiper-button-prev:after {display: none;}
 /* 세번째 section */
@@ -206,6 +220,9 @@ main .set .set_bnr{
     padding: 40px;
     position: relative;
 }
+main .set .set_bnr:hover {
+    filter: brightness(1.2);
+}
 main .set .set_bnr .left_wrap{}
 main .set .set_bnr .left_wrap h2{
     font-family: 'SunBatang-Light'; font-size: 1.875rem;
@@ -217,6 +234,9 @@ main .set .set_bnr .left_wrap > a {
     bottom: 40px; left: 50%; transform: translateX(-50%);
 }
 main .set .set_bnr .left_wrap > a img {}
+main .set .set_bnr .left_wrap > a:hover img {
+    filter: brightness(0.2);
+}
 main .set .set_bnr .right_wrap{}
 main .set .set_bnr .right_wrap p:nth-child(1){
     margin-bottom: 10px;
@@ -226,47 +246,293 @@ main .set .set_bnr .right_wrap p{
     font-size: 0.875rem; line-height: 1.4;
     font-weight: 300;
 }
-main .set .set_slide{}
-main .set .set_slide .swiper-button-prev{}
-main .set .set_slide .swiper-wrapper{
-    display: flex;
-}
-main .set .set_slide .swiper-wrapper .swiper-slide{
+main .set .set_slide{
+    width: 50%; overflow: hidden;
     position: relative;
 }
-main .set .set_slide .swiper-wrapper .swiper-slide .gift_product{}
-main .set .set_slide .swiper-wrapper .swiper-slide .gift_product .gift_img{}
-main .set .set_slide .swiper-wrapper .swiper-slide .gift_product .gift_img img{}
-main .set .set_slide .swiper-wrapper .swiper-slide .gift_product h2{
+main .set .set_slide .set_swiper{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 60px; left: 120px; right: auto;
+}
+main .set .set_slide .set_swiper .swiper-wrapper .swiper-slide{
+    width: max-content;
+}
+main .set .set_slide .set_swiper .swiper-wrapper .swiper-slide .gift_product{}
+main .set .set_slide .set_swiper .swiper-wrapper .swiper-slide .gift_product .gift_img{
+    width: 280px; height: 360px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+main .set .set_slide .set_swiper .swiper-wrapper .swiper-slide .gift_product .gift_img:hover img{
+    transform: scale(1.1);
+}
+main .set .set_slide .set_swiper .swiper-wrapper .swiper-slide .gift_product .gift_img img{}
+main .set .set_slide .set_swiper .swiper-wrapper .swiper-slide .gift_product h2{
     font-size: 1.125rem; font-weight: 600;
     margin-bottom: 3px;
 }
-main .set .set_slide .swiper-wrapper .swiper-slide .gift_product h3{
+main .set .set_slide .set_swiper .swiper-wrapper .swiper-slide .gift_product h3{
     font-size: 0.875rem;
     margin-bottom: 12px;
 }
-main .set .set_slide .swiper-wrapper .swiper-slide .gift_product p{
+main .set .set_slide .set_swiper .swiper-wrapper .swiper-slide .gift_product p{
     font-size: 0.875rem;
     line-height: 1.4; color: #aaa;
 }
-main .set .set_slide .swiper-wrapper .swiper-slide > a:last-child{
+main .set .set_slide .set_swiper .swiper-wrapper .swiper-slide > a:last-child{
     font-size: 0.75rem; color: #aaa;
     display: flex; align-items: center;
     position: absolute; bottom: 0; right: 0;
+    text-decoration: underline;
 }
-main .set .set_slide .swiper-wrapper .swiper-slide > a img{}
-main .set .set_slide .swiper-button-next{}
+main .set .set_slide .set_swiper .swiper-wrapper .swiper-slide > a img{}
+/* 슬라이드 버튼 */
+main .set .set_slide .swiper-button-prev{
+    width: 60px; height: 60px;
+    background: url(../images/icon_set_arrow.png) center / cover;
+    left: 60px; bottom: 286px; top: auto;
+}
+main .set .set_slide .swiper-button-next{
+    width: 60px; height: 60px;
+    background: url(../images/icon_set_arrow.png) center / cover;
+    left: auto; right: 132px; bottom: 286px; top: auto;
+    transform: scaleX(-1);
+}
+main .set .set_slide .swiper-button-prev:hover {
+    filter: brightness(0);
+}
+main .set .set_slide .swiper-button-next:hover {
+    filter: brightness(0);
+}
 /* 네번째 section */
-main .journal {}
+main .journal {
+    background: #FDFBF4;
+    padding: 120px 0;
+}
 main .journal .journal_wrap{}
-main .journal .journal_wrap .juournal_filter{}
-main .journal .journal_wrap .juournal_filter li{}
-main .journal .journal_wrap .juournal_filter li a{}
-main .journal .journal_wrap .juournal_filter li.journal_act{}
+main .journal .journal_wrap .journal_filter{
+    width: max-content;
+    margin: 120px auto;
+    display: flex; gap: 40px;
+}
+main .journal .journal_wrap .journal_filter li{}
+main .journal .journal_wrap .journal_filter li a{
+    color: #aaa; font-size: 1.125rem; line-height: 1;
+}
+main .journal .journal_wrap .journal_filter li.journal_act a{
+    color: #000; font-size: 1.375rem; line-height: 1;
+    text-decoration: underline; font-weight: 600;
+}
 main .journal .journal_wrap .journal_contents{}
-main .journal .journal_wrap .journal_contents .journal_img{}
+main .journal .journal_wrap .journal_contents .journal_img{
+    position: relative;
+    width: 596px;
+}
 main .journal .journal_wrap .journal_contents .journal_img .swiper-button-prev{}
-main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper{}
+main .journal .journal_wrap .journal_contents .journal_img .swiper-wrappe{}
 main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .swiper-slide{}
 main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .swiper-slide a {}
 main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .swiper-slide a img{}
+
+
+
+/* 다섯번째 section */
+main .wall_paper {
+    background: #FDFBF4;
+    padding: 120px 0;
+    position: relative;
+    z-index: 1;
+}
+main .wall_paper > p {
+    position: absolute;
+    z-index: -1;
+    font-size: 8.75rem; font-weight: 600; color: #d4d4d4;
+    left: 0; bottom: 0; opacity: 0.2;
+}
+main .wall_paper .paper_wrap{
+    width: max-content;
+    margin: 0 auto;
+    display: flex;
+}
+main .wall_paper .paper_wrap .paper1{
+    border-top-left-radius: 80px;
+}
+main .wall_paper .paper_wrap .paper2{}
+main .wall_paper .paper_wrap .paper3{
+    border-bottom-right-radius: 80px;
+}
+main .wall_paper .paper_wrap .paper {
+    overflow: hidden;
+    position: relative;
+}
+main .wall_paper .paper_wrap .paper .front{
+    height: 922px;
+}
+main .wall_paper .paper_wrap .paper .front img{}
+main .wall_paper .paper_wrap .paper .back{
+    display: flex; opacity: 0;
+    width: 100%; height: 100%;
+    position: absolute; left: 0; top: 0;
+    flex-flow: column nowrap;
+    align-items: center; justify-content: space-between;
+    background: linear-gradient(rgba(0,0,0,0.4) 50%, rgba(0,0,0,1) 100%);
+}
+main .wall_paper .paper_wrap .paper .back > p{
+    margin-top: 60px;
+}
+main .wall_paper .paper_wrap .paper .back > p img{}
+main .wall_paper .paper_wrap .paper .back .down_wrap{
+    margin-bottom: 30px;
+    text-align: center;
+}
+main .wall_paper .paper_wrap .paper .back .down_wrap h2{
+    color: #fff;
+    margin-bottom: 16px;
+    font-size: 1.125rem; font-weight: 500; line-height: 1;
+}
+main .wall_paper .paper_wrap .paper .back .down_wrap a{
+    color: #fff; font-size: 0.875rem;
+    display: flex; justify-content: center;
+}
+main .wall_paper .paper_wrap .paper .back .down_wrap a:hover {
+    text-decoration: underline;
+}
+main .wall_paper .paper_wrap .paper .back .down_wrap a img{
+    margin-left: 6px;
+}
+main .wall_paper .paper_wrap .paper .back .down_wrap p{
+    color: #fff; font-size: 0.875rem;
+    margin-top: 16px;
+}
+/* 여섯번째 section */
+main .store {
+    background: #FDFBF4;
+    padding: 120px 0;
+    position: relative;
+    z-index: 1;
+}
+main .store >p {
+    position: absolute;
+    z-index: -1; left: 0; top: 0;
+    font-size: 8.75rem; font-weight: 600;
+    color: #d4d4d4;
+}
+main .store .store_wrap {}
+main .store_wrap .store_container {
+    height: 100vh;
+    display: flex;
+}
+main .store_wrap .store_container .list {
+    position: sticky; left: 80px; top: 0;
+}
+main .store_wrap .store_container .list .store_list {
+    margin-bottom: 80px;
+}
+main .store_wrap .store_container .list .store_list h3 {
+    font-size: 1.125rem; font-weight: 600;
+}
+main .store_wrap .store_container .list .store_list p {}
+main .store_wrap .store_container .list .store_list p a:first-child {
+    margin-left: 0;
+}
+main .store_wrap .store_container .list .store_list p a {
+    font-size: 1.875rem; font-weight: 600;
+    margin-left: 20px;
+}
+main .store_wrap .store_container .list .coffee_list {}
+main .store_wrap .store_container .list .coffee_list h3 {
+    font-size: 1.125rem; font-weight: 600;
+}
+main .store_wrap .store_container .list .coffee_list p {}
+main .store_wrap .store_container .list .coffee_list p a:first-child {
+    margin-left: 0;
+}
+main .store_wrap .store_container .list .coffee_list p a {
+    font-size: 1.875rem; font-weight: 600;
+    margin-left: 20px;
+}
+main .store_wrap .store_container .store_pic_wrap{}
+main .store_wrap .store_container .store_pic_wrap .store_gnb{}
+main .store_wrap .store_container .store_pic_wrap .store_gnb a{}
+main .store_wrap .store_container .store_pic_wrap .store_gnb a.current{}
+main .store_wrap .store_container .store_pic_wrap .store_pic{}
+main .store_wrap .more_store{}
+/* 일곱번째 section */
+main .index {}
+main .index .index_wrap {
+    padding-top: 120px;
+    width: 100%; height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.34), rgba(0,0,0,0.34)), url(../images/index/img_index001.jpg) center / cover;
+}
+main .index .index_wrap .index_filter {
+    width: max-content;
+    margin: 0 auto;
+    display: flex; gap: 40px;
+}
+main .index .index_wrap .index_filter li {}
+main .index .index_wrap .index_filter li a {
+    font-size: 1.125rem; color: #fff; line-height: 1;
+}
+main .index .index_wrap .index_filter li.index_act a {
+    font-size: 1.375rem; line-height: 1; font-weight: 600;
+    text-decoration: underline; color: #000;
+}
+main .index .index_wrap .index_contents {
+    position: relative;
+    width: 584px;
+    padding: 0 90px;
+    margin-top: 120px;
+}
+main .index .index_wrap .index_contents .swiper-wrapper {}
+main .index .index_wrap .index_contents .swiper-wrapper .swiper-slide {
+    padding: 80px 32px;
+    background: rgba(255, 255, 255, 0.52);
+}
+main .index .index_wrap .index_contents .swiper-wrapper .swiper-slide a {}
+main .index .index_wrap .index_contents .swiper-wrapper .swiper-slide a h2 {
+    font-size: 1.5rem; font-weight: 600;
+    margin-bottom: 8px;
+}
+main .index .index_wrap .index_contents .swiper-wrapper .swiper-slide a h3 {
+    font-size: 0.875rem;
+}
+main .index .index_wrap .index_contents .swiper-wrapper .swiper-slide a h3::after {
+    content: ''; display: inline-block;
+    width: 100%; height: 1px;
+    background: #000;
+    margin: 8px 0;
+}
+main .index .index_wrap .index_contents .swiper-wrapper .swiper-slide a .perfume_note {
+    font-size: 0.875rem;
+    line-height: 1.4;
+    text-align: left;
+}
+main .index .index_wrap .index_contents .swiper-wrapper .swiper-slide a .perfume_note::after {
+    content: ''; display: inline-block;
+    width: 100%; height: 1px;
+    background: #000;
+    margin: 8px 0;
+}
+main .index .index_wrap .index_contents .swiper-wrapper .swiper-slide a p {
+    font-size: 0.875rem; font-weight: 300;
+    line-height: 1.8; text-align: justify;
+}
+/* index 슬라이드 버튼 */
+main .index .index_wrap .swiper-button-prev {
+    width: 50px; height: 50px;
+    background: url(../images/icon_50_arrow.png) center / cover;
+    filter: invert(1); transform: scaleX(-1);
+}
+main .index .index_wrap .swiper-button-prev:hover {
+    filter: invert(0);
+}
+main .index .index_wrap .swiper-button-next {
+    width: 50px; height: 50px;
+    background: url(../images/icon_50_arrow.png) center / cover;
+    filter: invert(1);
+}
+main .index .index_wrap .swiper-button-next:hover {
+    filter: invert(0);
+}
