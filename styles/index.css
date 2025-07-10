@@ -12,9 +12,8 @@ main .main_title iframe {
 }
 /* 두번째 section */
 main .shop {
-    height: 100vh;
     background: #FDFBF4;
-    padding: 120px 0 0;
+    padding: 120px 0;
 }
 main .shop .shop_container {
     width: 1440px;
