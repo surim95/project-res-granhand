@@ -27,37 +27,37 @@ main .shop .shop_container .slide_wrap .filter{
 }
 /* filter gradient 개별 class */
 .filter_gradient1 {
-    background: linear-gradient(rgba(255,255,255,0) 0%, rgba(0,0,0,1) 15%,rgba(255,255,255,0) 65%);
+    background: linear-gradient(rgba(255,255,255,0) 0%, rgba(0,0,0,1) 15%,rgba(255,255,255,0) 50%);
     background-clip: text; color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .filter_gradient2 {
-    background: linear-gradient(rgba(255,255,255,0) 5%, rgba(0,0,0,1) 30%,rgba(255,255,255,0) 70%);
+    background: linear-gradient(rgba(255,255,255,0) 5%, rgba(0,0,0,1) 20%,rgba(255,255,255,0) 60%);
     background-clip: text; color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .filter_gradient3 {
-    background: linear-gradient(rgba(255,255,255,0) 8%, rgba(0,0,0,1) 40% ,rgba(255,255,255,0) 65%);
+    background: linear-gradient(rgba(255,255,255,0) 8%, rgba(0,0,0,1) 25% ,rgba(255,255,255,0) 65%);
     background-clip: text; color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .filter_gradient4 {
-    background: linear-gradient(rgba(255,255,255,0) 10%, rgba(0,0,0,1) 45%,rgba(255,255,255,0) 65%);
+    background: linear-gradient(rgba(255,255,255,0) 10%, rgba(0,0,0,1) 30%,rgba(255,255,255,0) 65%);
     background-clip: text; color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .filter_gradient5 {
-    background: linear-gradient(rgba(255,255,255,0) 12%, rgba(0,0,0,1) 55%,rgba(255,255,255,0) 75%);
+    background: linear-gradient(rgba(255,255,255,0) 12%, rgba(0,0,0,1) 40%,rgba(255,255,255,0) 75%);
     background-clip: text; color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .filter_gradient6 {
-    background: linear-gradient(rgba(255,255,255,0) 15%, rgba(0,0,0,1) 60%,rgba(255,255,255,0) 95%);
+    background: linear-gradient(rgba(255,255,255,0) 15%, rgba(0,0,0,1) 50%,rgba(255,255,255,0) 95%);
     background-clip: text; color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -413,18 +413,19 @@ main .store {
     z-index: 1;
 }
 main .store >p {
-    position: absolute;
+    position: sticky;
     z-index: -1; left: 0; top: 0;
     font-size: 8.75rem; font-weight: 600;
     color: #d4d4d4;
 }
 main .store .store_wrap {}
 main .store_wrap .store_container {
+    width: 100%;
     height: 100vh;
-    display: flex;
+    /* display: flex; */
 }
 main .store_wrap .store_container .list {
-    position: sticky; left: 80px; top: 0;
+    position: sticky; left: 80px; top: 628px;
 }
 main .store_wrap .store_container .list .store_list {
     margin-bottom: 80px;
@@ -452,9 +453,22 @@ main .store_wrap .store_container .list .coffee_list p a {
     font-size: 1.875rem; font-weight: 600;
     margin-left: 20px;
 }
-main .store_wrap .store_container .store_pic_wrap{}
-main .store_wrap .store_container .store_pic_wrap .store_gnb{}
-main .store_wrap .store_container .store_pic_wrap .store_gnb a{}
+main .store_wrap .store_container .store_pic_wrap{
+    background: yellow;
+}
+main .store_wrap .store_container .store_pic_wrap .store_gnb{
+    position: absolute; top:70px; right: 41.5px;
+    display: flex; 
+}
+main .store_wrap .store_container .store_pic_wrap .store_gnb a{
+    display: flex; align-items: center;
+}
+main .store_wrap .store_container .store_pic_wrap .store_gnb a::after {
+    content: ''; display: block;
+    width: 1px; height: 16px;
+    background: #000;
+    margin: 0 10px;
+}
 main .store_wrap .store_container .store_pic_wrap .store_gnb a.current{}
 main .store_wrap .store_container .store_pic_wrap .store_pic{}
 main .store_wrap .more_store{}

@@ -52,7 +52,7 @@ gnbText.forEach((gnbTextAdd)=>{
             gnbTextAdd.style.color = '#000';
             logoImg.src = './images/logo_b.png';
             headerLine.style.borderBottom = '1px solid #000';
-            headerLine.style.background = 'rgba(0, 0, 0, 0)';
+            headerLine.style.background = 'rgba(255, 255, 255, 0.8)';
             iconImg.forEach((iconImgInvert)=>{iconImgInvert.style.filter = 'brightness(0)'});
             langBtn.style.filter = 'brightness(0)';
             langOption.style.background = 'rgba(255, 255, 255, 1)';
@@ -193,9 +193,15 @@ wallPaperFront.forEach((paper)=>{
     paper.addEventListener('mouseover',()=>{
         const wallPaperBack = paper.querySelector('.back');
         wallPaperBack.style.opacity = 1;
+        const paperOut = paper.children[0];
+        const paperOver = paperOut.children[0];
+        paperOver.style.transform = 'scale(1.04)';
     })
     paper.addEventListener('mouseout',()=>{
         const wallPaperBack = paper.querySelector('.back');
         wallPaperBack.style.opacity = 0;
+        const paperOut = paper.children[0];
+        const paperOver = paperOut.children[0];
+        paperOver.style.transform = 'scale(1)';
     })
 })
