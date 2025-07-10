@@ -135,4 +135,36 @@ function gradientText(){
         filter.classList.remove('filter_gradient5');
     }
 }
+/* 제품 정렬 기준 */
+const productAlign = document.querySelectorAll('.right_category a');
+console.log(productAlign);
+productAlign.forEach((alignFilter)=>{
+    alignFilter.addEventListener('click',()=>{
+        productAlign.forEach((remove)=>{
+            remove.classList.remove('active_category');
+        })
+        alignFilter.classList.add('active_category');
+    })
+})
+/* 퍼퓸노트 버튼 */
+const perfumeNoteBtn = document.querySelectorAll('.perfume_note_btn');
+
+perfumeNoteBtn.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        const note = btn.closest('.product').querySelector('.perfume_note');
+        const img = btn.querySelector('img');
+        if (note.style.display === 'none') {
+            note.style.display = 'block';
+            img.style.transform = 'scaleY(-1)';
+        } else {
+            note.style.display = 'none';
+            img.style.transform = 'scaleY(1)';
+        };
+        setInterval(perfumeNoteTimer, 8000);
+        function perfumeNoteTimer(){
+            note.style.display = 'none';
+            img.style.transform = 'scaleY(1)';
+        }
+    });
+});
 

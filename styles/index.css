@@ -70,7 +70,7 @@ main .shop .shop_container .slide_wrap .filter li:last-child {
     margin-bottom: 0;
 }
 main .shop .shop_container .slide_wrap .filter li a.active_filter{
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-family: 'SunBatang-Bold';
     text-decoration: 1px underline;
 }
@@ -83,16 +83,51 @@ main .shop .shop_container .slide_wrap .filter li a{
     gap: 6px;
 }
 main .shop .shop_container .slide_wrap .filter li a img{
-    width: 20px; height: 20px;
     display: none; margin-bottom: 4px;
 }
 main .shop .shop_container .slide_wrap .product_wrap {}
+main .shop .shop_container .slide_wrap .product_wrap .product_category {
+    display: flex; justify-content: space-between;
+    margin-bottom: 12px;
+}
+main .shop .shop_container .slide_wrap .product_wrap .product_category .left_category {}
+main .shop .shop_container .slide_wrap .product_wrap .product_category .left_category a {
+    display: flex; align-items: center;
+    margin-right: 4px; font-size: 1.125rem; font-weight: 500;
+    color: #aaa;
+}
+main .shop .shop_container .slide_wrap .product_wrap .product_category .left_category a img {
+    filter: invert(50%);
+    width: 20px; height: 20px;
+}
+/* 전체상품 바로가기 hover */
+main .shop .shop_container .slide_wrap .product_wrap .product_category .left_category a:hover {
+    color: #000;
+}
+main .shop .shop_container .slide_wrap .product_wrap .product_category .left_category a:hover img {
+    filter: invert(0);
+}
+/* hover 이벤트 끝 */
+main .shop .shop_container .slide_wrap .product_wrap .product_category .right_category {}
+main .shop .shop_container .slide_wrap .product_wrap .product_category .right_category a {
+    color: #c0c0c0;
+}
+main .shop .shop_container .slide_wrap .product_wrap .product_category .right_category a:nth-child(1)::after, main .shop .shop_container .slide_wrap .product_wrap .product_category .right_category a:nth-child(2)::after {
+    content: ''; display: inline-block;
+    width: 1px; height: 12px; background: #c0c0c0;
+    margin: 0 12px;
+}
+main .shop .shop_container .slide_wrap .product_wrap .product_category .right_category .active_category{
+    color: #000;
+}
+/* 슬라이드 영역 시작 */
 main .shop .shop_container .slide_wrap .product_wrap .product_swiper {
-    width: 1128px;
-    display: flex; gap: 34px;
+    position: relative;
+    border: 1px solid red;
+    width: 1166px;
 }
 main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper{
-    height: 479px; overflow: visible;
+    height: 479px;
 }
 main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide {
     display: flex; gap: 90px;
@@ -101,26 +136,58 @@ main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wra
     width: 316px;
     position: relative;
 }
-main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide a {}
-main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide a > p{
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .product .pd {}
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .product .pd > p{
     font-size: 0.875rem; line-height: 1.4; color: #aaa;
     text-align: right; position: absolute; right: 0; bottom: 0;
 }
-main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide a .thumnail{
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .product .pd .thumnail{
     margin-bottom: 4px;
 }
-main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide a .thumnail img{
-    width: 100%;
-}
-main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide a .product_name{}
-main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide a .product_name h2{
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .product .pd .thumnail img{}
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .product .pd .product_name{}
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .product .pd .product_name h2{
     font-size: 1.125rem; font-weight: 600; margin-bottom: 3px;
 }
-main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide a .product_name p{
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .product .pd .product_name p{
     font-size: 0.875rem;
 }
+/* 퍼퓸노트 btn */
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .product .perfume_note_btn {
+    display: flex; align-items: center;
+    position: absolute; left: 10px; top: 10px;
+}
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .product .perfume_note_btn img {}
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .product .perfume_note_btn span {
+    font-size: 0.75rem; text-decoration: underline;
+    color: #4d4d4d;
+}
+/* 퍼퓸노트 시작 */
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .product .perfume_note {
+    position: absolute; left: 10px; top: 26px; right: 10px;
+    background: rgba(253,251,244, 0.8) ;
+    padding: 8px;
+    border: 1px solid #4d4d4d;
+    display: none;
+}
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .product .perfume_note p:first-child {
+    margin-top: 0;
+}
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .product .perfume_note p {
+    color: #4d4d4d; font-size: 0.75rem;
+    text-decoration: underline;
+    margin-top: 4px; line-height: 1.4;
+}
+/* 퍼퓸노트 끝 */
+/* 슬라이드 영역 끝 */
+/* 슬라이드 스크롤, 버튼 */
 main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-scrollbar{}
-main .shop .shop_container .product_wrap .swiper-button-next{}
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-button-next{
+    border: 1px solid red;
+    width: 60px; height: 60px;
+    background: url(../images/icon_page_down.png) center / cover;
+}
+.swiper-button-next:after, .swiper-button-prev:after {display: none;}
 /* 세번째 section */
 main .set {
     display: flex;
