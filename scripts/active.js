@@ -167,4 +167,19 @@ perfumeNoteBtn.forEach((btn) => {
         }
     });
 });
+/* shop 장바구니 버튼 */
+const shopCartBtn = document.querySelectorAll('.shop_cart_btn');
+let shopCartAct = false;
+shopCartBtn.forEach((btn)=>{
+    btn.addEventListener('click',()=>{
+        if (shopCartAct) {
+            btn.children[0].style.filter = 'invert(0)';
+            shopCartAct = false;
+        } else {
+            btn.children[0].style.filter = 'invert(1)';
+            shopCartAct = true;
+        }
+        
+    })
+});
 

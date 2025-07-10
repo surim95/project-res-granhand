@@ -179,6 +179,11 @@ main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wra
     margin-top: 4px; line-height: 1.4;
 }
 /* 퍼퓸노트 끝 */
+/* shop 장바구니 버튼 */
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .product .shop_cart_btn {
+    position: absolute; top: 387px; right: 10px;
+}
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .product .shop_cart_btn img {}
 /* 슬라이드 영역 끝 */
 /* 슬라이드 스크롤, 버튼 */
 main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-scrollbar{}
