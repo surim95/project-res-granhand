@@ -212,7 +212,7 @@ main .set {
 }
 main .set .set_bnr{
     width: 50%; height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../images/img_bnr.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../images/img_bnr001.jpg);
     background-position: center;
     background-size: cover;
     display: flex; justify-content: space-between;
@@ -220,7 +220,8 @@ main .set .set_bnr{
     position: relative;
 }
 main .set .set_bnr:hover {
-    filter: brightness(1.2);
+    filter: brightness(1.1);
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../images/img_bnr002.jpg);
 }
 main .set .set_bnr .left_wrap{}
 main .set .set_bnr .left_wrap h2{
@@ -425,7 +426,7 @@ main .store_wrap .store_container {
     /* display: flex; */
 }
 main .store_wrap .store_container .list {
-    position: sticky; left: 80px; top: 628px;
+    position: sticky; margin-left: 80px; top: 628px;
 }
 main .store_wrap .store_container .list .store_list {
     margin-bottom: 80px;
@@ -461,7 +462,11 @@ main .store_wrap .store_container .store_pic_wrap .store_gnb{
     display: flex; 
 }
 main .store_wrap .store_container .store_pic_wrap .store_gnb a{
+    font-family: 'SunBatang-Light';
     display: flex; align-items: center;
+}
+main .store_wrap .store_container .store_pic_wrap .store_gnb a:last-child::after {
+    display: none;
 }
 main .store_wrap .store_container .store_pic_wrap .store_gnb a::after {
     content: ''; display: block;
@@ -500,6 +505,7 @@ main .index .index_wrap .index_contents {
 }
 main .index .index_wrap .index_contents .swiper-wrapper {}
 main .index .index_wrap .index_contents .swiper-wrapper .swiper-slide {
+    height: 486px;
     padding: 80px 32px;
     background: rgba(255, 255, 255, 0.52);
 }

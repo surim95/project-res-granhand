@@ -185,7 +185,6 @@ shopCartBtn.forEach((btn)=>{
         
     })
 });
-
 /* wallpaper 이벤트 */
 const wallPaperFront = document.querySelectorAll('.paper');
 
