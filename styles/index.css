@@ -327,16 +327,47 @@ main .journal .journal_wrap .journal_filter li.journal_act a{
 }
 main .journal .journal_wrap .journal_contents{}
 main .journal .journal_wrap .journal_contents .journal_img{
-    position: relative;
-    width: 596px;
+    width: 55.6%;
 }
-main .journal .journal_wrap .journal_contents .journal_img .swiper-button-prev{}
-main .journal .journal_wrap .journal_contents .journal_img .swiper-wrappe{}
-main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .swiper-slide{}
-main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .swiper-slide a {}
-main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .swiper-slide a img{}
-
-
+main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper{}
+main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .swiper-slide{
+    display: flex;
+    background: #FDFBF4;
+}
+main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .swiper-slide > a {}
+main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .swiper-slide > a img{}
+main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .swiper-slide .journal_title {
+    margin: 125.5px 0 125.5px 190px;
+    width: 481px;
+}
+main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .swiper-slide .journal_title h2{
+    font-family: 'SunBatang-Bold'; font-size: 1.75rem; line-height: 1.4;
+    margin-bottom: 4px;
+}
+main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .swiper-slide .journal_title h3{
+    font-family: 'Daehan-Bold'; font-size: 1.75rem; line-height: 1.4;
+}
+main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .swiper-slide .journal_title p{
+    margin: 68px 0 78px;
+    font-size: 0.938rem; line-height: 1.8;
+}
+main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .swiper-slide .journal_title > a{
+    border: 1px solid #D4A373;
+    color: #D4A373;
+    border-radius: 4px;
+    padding: 10.5px 15px;
+}
+main .journal .journal_wrap .journal_contents .journal_img .swiper-button-prev{
+    border: 1px solid red;
+    width: 50px; height: 50px;
+    background: url(../images/icon_50_arrow.png) center / cover;
+    transform: scaleX(-1);
+}
+main .journal .journal_wrap .journal_contents .journal_img .swiper-button-next{
+    border: 1px solid red;
+    width: 50px; height: 50px;
+    background: url(../images/icon_50_arrow.png) center / cover;
+}
 
 /* 다섯번째 section */
 main .wall_paper {
@@ -414,19 +445,18 @@ main .store {
     z-index: 1;
 }
 main .store >p {
-    position: sticky;
+    position: absolute;
     z-index: -1; left: 0; top: 0;
     font-size: 8.75rem; font-weight: 600;
     color: #d4d4d4;
 }
 main .store .store_wrap {}
 main .store_wrap .store_container {
+    overflow: hidden;
     width: 100%;
-    height: 100vh;
-    /* display: flex; */
 }
 main .store_wrap .store_container .list {
-    position: sticky; margin-left: 80px; top: 628px;
+    position: sticky; margin-left: 80px; top: 200px;
 }
 main .store_wrap .store_container .list .store_list {
     margin-bottom: 80px;
@@ -455,7 +485,9 @@ main .store_wrap .store_container .list .coffee_list p a {
     margin-left: 20px;
 }
 main .store_wrap .store_container .store_pic_wrap{
+    width: 70%;
     background: yellow;
+    float: right;
 }
 main .store_wrap .store_container .store_pic_wrap .store_gnb{
     position: absolute; top:70px; right: 41.5px;
@@ -475,7 +507,11 @@ main .store_wrap .store_container .store_pic_wrap .store_gnb a::after {
     margin: 0 10px;
 }
 main .store_wrap .store_container .store_pic_wrap .store_gnb a.current{}
-main .store_wrap .store_container .store_pic_wrap .store_pic{}
+main .store_wrap .store_container .store_pic_wrap .store_pic{
+    width: 50%; height: 100%;
+    float: right;
+    background: orange;
+}
 main .store_wrap .more_store{}
 /* 일곱번째 section */
 main .index {}

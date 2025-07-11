@@ -47,7 +47,7 @@ gnbText.forEach((gnbTextAdd)=>{
     })
     /* 스크롤 위치에 따른 헤더 색상 반전 */
     window.addEventListener('scroll',()=>{
-        console.log(window.scrollY);
+        //console.log(window.scrollY);
         if (window.scrollY > 840) {
             gnbTextAdd.style.color = '#000';
             logoImg.src = './images/logo_b.png';
@@ -204,3 +204,4 @@ wallPaperFront.forEach((paper)=>{
         paperOver.style.transform = 'scale(1)';
     })
 })
+

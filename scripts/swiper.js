@@ -22,14 +22,20 @@ const setSwiper = new Swiper ('.set_swiper',{
     },
 })
 
-/* const journalSwiper = new Swiper ('.journal_img',{
-    slidesPerView:'auto',
+const journalSwiper = new Swiper ('.journal_img',{
+    slidesPerView: 1,
     loop: true,
     navigation:{
-        nextEl:'.journal_img .swiper-button-next',
-        prevEl:'.journal_img .swiper-button-prev',
+        nextEl:'.journal_img > .swiper-button-next',
+        prevEl:'.journal_img > .swiper-button-prev',
     },
-}) */
+    on: {
+        slideChange: function() {
+            console.log(this.realIndex);
+        }
+    }
+})
+
 
 const indexSwiper = new Swiper ('.index_contents', {
     slidesPerView: 1,
