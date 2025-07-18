@@ -1,134 +1,162 @@
 body {
-    width: 100%;
-    position: relative;
+  width: 100%;
+  position: relative;
 }
 body * {
-    transition: all 0.3s;
+  transition: all 0.3s;
 }
 header {
-    width: 100%;
-    position: fixed;
-    left: 0; top: 0;
-    z-index: 999;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
 }
 header .head_wrap {
-    position: relative;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #fff;
-    background: rgba(0, 0, 0, 0.2);
+  position: relative;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #fff;
+  background: rgba(0, 0, 0, 0.2);
 }
-header .head_wrap nav {}
-header .head_wrap nav .menu{
-    display: none;
+header .head_wrap nav {
+}
+header .head_wrap nav .menu {
+  display: none;
 }
 header .head_wrap nav .gnb {
-    display: flex;
-    gap: 20px;
-    padding: 30px 0;
+  display: flex;
+  gap: 20px;
+  padding: 30px 0;
 }
-header .head_wrap nav .gnb li {}
+header .head_wrap nav .gnb li {
+}
 header .head_wrap nav .gnb li a {
-    font-family: 'SunBatang-Light';
-    font-size: 18px;
-    color: #fff;
+  font-family: "SunBatang-Light";
+  font-size: 18px;
+  color: #fff;
 }
 header .head_wrap .logo {
-    position: absolute;
-    left: 50%; transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
-header .head_wrap .logo h1 {}
-header .head_wrap .logo h1 a {}
-header .head_wrap .logo h1 a img {}
+header .head_wrap .logo h1 {
+}
+header .head_wrap .logo h1 a {
+}
+header .head_wrap .logo h1 a img {
+}
 header .head_wrap .right_wrap {
-    display: flex; gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 header .head_wrap .right_wrap > a {
-    width: 22px; height: 22px;
+  width: 22px;
+  height: 22px;
 }
 header .head_wrap .right_wrap > a:hover img {
-    filter:brightness(0.5) !important;
+  filter: brightness(0.5) !important;
 }
-header .head_wrap .right_wrap > a img {}
+header .head_wrap .right_wrap > a img {
+}
 header .head_wrap .right_wrap .lang_wrap {
-    position: relative;
+  position: relative;
 }
 header .head_wrap .right_wrap .lang_wrap #lang_btn {
-    width: 36px; height: 24px;
+  width: 36px;
+  height: 24px;
 }
 header .head_wrap .right_wrap .lang_wrap #lang_btn:hover {
-    filter:brightness(0.5) !important;
+  filter: brightness(0.5) !important;
 }
-header .head_wrap .right_wrap .lang_wrap #lang_btn img:nth-child(1) {}
-header .head_wrap .right_wrap .lang_wrap #lang_btn img:nth-child(2) {}
+header .head_wrap .right_wrap .lang_wrap #lang_btn img:nth-child(1) {
+}
+header .head_wrap .right_wrap .lang_wrap #lang_btn img:nth-child(2) {
+}
 header .head_wrap .right_wrap .lang_wrap .lang_select {
-    display: none; flex-flow: column nowrap;
-    position: absolute; top: 100; left: 0; transform: translateY(10px);
-    background: rgba(0, 0, 0, 0.8);
-    border: 1px solid #fff;
-    padding: 0 12px 12px;
+  display: none;
+  flex-flow: column nowrap;
+  position: absolute;
+  top: 100;
+  left: 0;
+  transform: translateY(10px);
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #fff;
+  padding: 0 12px 12px;
 }
 header .head_wrap .right_wrap .lang_wrap .lang_select a {
-    color: #fff;
-    margin-top: 12px;
+  color: #fff;
+  margin-top: 12px;
 }
 header .head_wrap .right_wrap .lang_wrap .lang_select a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 /* footer */
 footer {
-    background-color: #FDFBF4;
+  background-color: #fdfbf4;
 }
-footer .foot_wrap{
-    width: 75%;
-    margin: 0 auto;
-    padding: 40px 0;
+footer .foot_wrap {
+  width: 75%;
+  margin: 0 auto;
+  padding: 40px 0;
 }
-footer .foot_wrap > p{
-    font-size: 0.875rem; line-height: 1.6;
-    padding-right: 497px;
-    color: #aaa;
-    margin-bottom: 40px;
+footer .foot_wrap > p {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  padding-right: 497px;
+  color: #aaa;
+  margin-bottom: 40px;
 }
-footer .foot_wrap .com_info{
-    display: flex;
-    text-align: center;
-    justify-content: space-between;
+footer .foot_wrap .com_info {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
 }
-footer .foot_wrap .com_info .wrap{}
-footer .foot_wrap .com_info .wrap .top{
-    display: flex;
-    margin-bottom: 6px;
+footer .foot_wrap .com_info .wrap {
 }
-footer .foot_wrap .com_info .wrap .top a{
-    font-size: 0.875rem; color: #000; margin-right: 52px;
+footer .foot_wrap .com_info .wrap .top {
+  display: flex;
+  margin-bottom: 6px;
 }
-footer .foot_wrap .com_info .wrap .top > p{
-    font-size: 0.875rem; color: #000;
+footer .foot_wrap .com_info .wrap .top a {
+  font-size: 0.875rem;
+  color: #000;
+  margin-right: 52px;
 }
-footer .foot_wrap .com_info .wrap .top > p:nth-child(2){
-    margin-right: 6px;
+footer .foot_wrap .com_info .wrap .top > p {
+  font-size: 0.875rem;
+  color: #000;
 }
-footer .foot_wrap .com_info .wrap .bottom_left{
-    display: flex;
+footer .foot_wrap .com_info .wrap .top > p:nth-child(2) {
+  margin-right: 6px;
 }
-footer .foot_wrap .com_info  .wrap .bottom_left > p {
-    font-size: 0.875rem; color: #000; margin-right: 18px;
+footer .foot_wrap .com_info .wrap .bottom_left {
+  display: flex;
 }
-footer .foot_wrap .com_info  .wrap .bottom_left > p:last-child{
-    margin-right: 0;
+footer .foot_wrap .com_info .wrap .bottom_left > p {
+  font-size: 0.875rem;
+  color: #000;
+  margin-right: 18px;
+}
+footer .foot_wrap .com_info .wrap .bottom_left > p:last-child {
+  margin-right: 0;
 }
 footer .foot_wrap .com_info .bottom_right {
-    display: flex; align-items: center;
+  display: flex;
+  align-items: center;
 }
 footer .foot_wrap .com_info .bottom_right > p {
-    font-size: 0.875rem; color: #000; margin-right: 20px;
+  font-size: 0.875rem;
+  color: #000;
+  margin-right: 20px;
 }
-footer .foot_wrap .com_info .bottom_right > p img{
-    width: 24px; height: 24px;
+footer .foot_wrap .com_info .bottom_right > p img {
+  width: 24px;
+  height: 24px;
 }
-footer .foot_wrap .com_info .bottom_right > p:last-child{
-    margin-right: 0;
+footer .foot_wrap .com_info .bottom_right > p:last-child {
+  margin-right: 0;
 }
