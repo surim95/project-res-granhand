@@ -205,3 +205,21 @@ wallPaperFront.forEach((paper)=>{
     })
 })
 
+const journalFilter = document.querySelectorAll('.journal_filter li');
+for(let i of journalFilter){
+    i.addEventListener('click',()=>{
+        journalFilter.forEach((filter)=>{
+            filter.classList.remove('journal_act');
+        })
+        i.classList.add('journal_act');
+    })
+}
+const indexFilter = document.querySelectorAll('.index_filter li');
+for(let i of indexFilter){
+    i.addEventListener('click',()=>{
+        indexFilter.forEach((filter)=>{
+            filter.classList.remove('index_act');
+        })
+        i.classList.add('index_act');
+    })
+}
