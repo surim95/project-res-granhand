@@ -13,6 +13,7 @@ const productSwiper = new Swiper ('.product_swiper',{
 });
 
 const setSwiper = new Swiper ('.set_swiper',{
+    //autoplay:{delay:10000},
     slidesPerView:'auto',
     spaceBetween: 80,
     loop: true,
@@ -23,6 +24,8 @@ const setSwiper = new Swiper ('.set_swiper',{
 })
 
 const journalSwiper = new Swiper ('.journal_img',{
+    //autoplay:{delay:10000},
+    effect: 'fade',
     slidesPerView: 1,
     loop: true,
     navigation:{
@@ -38,6 +41,7 @@ const journalSwiper = new Swiper ('.journal_img',{
 
 
 const indexSwiper = new Swiper ('.index_contents', {
+    //autoplay:{delay:10000},
     slidesPerView: 1,
     spaceBetween: 90,
     loop:true,

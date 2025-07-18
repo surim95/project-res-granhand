@@ -47,8 +47,8 @@ gnbText.forEach((gnbTextAdd)=>{
     })
     /* 스크롤 위치에 따른 헤더 색상 반전 */
     window.addEventListener('scroll',()=>{
-        //console.log(window.scrollY);
-        if (window.scrollY > 840) {
+        console.log(window.scrollY);
+        if (window.scrollY > 990) {
             gnbTextAdd.style.color = '#000';
             logoImg.src = './images/logo_b.png';
             headerLine.style.borderBottom = '1px solid #000';
@@ -69,9 +69,9 @@ gnbText.forEach((gnbTextAdd)=>{
             langOption.style.border = '1px solid #fff';
             langOptionText.forEach((langText)=>{langText.style.color = '#fff';})
         }
-        if ((window.scrollY > 1846 && window.scrollY < 2768) || (window.scrollY > 3850 && window.scrollY < 5014)) {
+        if ((window.scrollY > 1720 && window.scrollY < 2643)) {
             header.style.display = 'none';
-        } else if ((window.scrollY < 1846 || window.scrollY > 2768) || (window.scrollY < 3850 || window.scrollY > 5014)) {
+        } else if ((window.scrollY < 1720 || window.scrollY > 2643)) {
             header.style.display = 'block';
         };
     });
