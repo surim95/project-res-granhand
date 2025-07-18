@@ -1,5 +1,5 @@
 body {
-    width: 100%;
+    width: 1920px;
     position: relative;
 }
 body * {
@@ -12,17 +12,22 @@ header {
     z-index: 999;
 }
 header .head_wrap {
+    position: relative;
+    padding: 0 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     border-bottom: 1px solid #fff;
     background: rgba(0, 0, 0, 0.2);
 }
 header .head_wrap nav {}
+header .head_wrap nav .menu{
+    display: none;
+}
 header .head_wrap nav .gnb {
     display: flex;
     gap: 20px;
-    padding: 29.5px 0;
+    padding: 30px 0;
 }
 header .head_wrap nav .gnb li {}
 header .head_wrap nav .gnb li a {
@@ -31,8 +36,8 @@ header .head_wrap nav .gnb li a {
     color: #fff;
 }
 header .head_wrap .logo {
-    margin: 0 614px 0 330px;
-    justify-self: center;
+    position: absolute;
+    left: 50%; transform: translateX(-50%);
 }
 header .head_wrap .logo h1 {}
 header .head_wrap .logo h1 a {}
