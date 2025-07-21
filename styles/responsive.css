@@ -1,0 +1,117 @@
+/* responsive.css */
+/* Desktop 1201~1920 */
+/* Tablet 1200~761 */
+/* Mobile 760~320 */
+@media screen and (max-width: 1200px) {
+  header .head_wrap nav .menu {
+    display: block;
+    padding: 20px 0;
+  }
+  header .head_wrap nav .gnb {
+    display: none;
+  }
+  header .head_wrap .logo h1 a img {
+    width: 90%;
+  }
+  main .shop .shop_container {
+  }
+  main .shop .shop_container .slide_wrap .product_wrap .product_category {
+    justify-content: space-between;
+  }
+  main .shop .shop_container .slide_wrap .product_wrap .product_swiper {
+    width: 100%;
+  }
+  main
+    .shop
+    .shop_container
+    .slide_wrap
+    .product_wrap
+    .product_swiper
+    .swiper-scrollbar {
+    border-radius: 4px;
+    right: 0;
+  }
+  main
+    .shop
+    .shop_container
+    .slide_wrap
+    .product_wrap
+    .product_swiper
+    .swiper-wrapper
+    .swiper-slide {
+    gap: 40px;
+  }
+  main
+    .shop
+    .shop_container
+    .slide_wrap
+    .product_wrap
+    .product_swiper
+    .swiper-wrapper
+    .swiper-slide
+    .product {
+    width: 240px;
+    position: relative;
+  }
+  main
+    .shop
+    .shop_container
+    .slide_wrap
+    .product_wrap
+    .product_swiper
+    .swiper-wrapper
+    .swiper-slide
+    .product
+    .pd
+    .thumnail {
+    height: 320px;
+  }
+  main
+    .shop
+    .shop_container
+    .slide_wrap
+    .product_wrap
+    .product_swiper
+    .swiper-wrapper
+    .swiper-slide
+    .product
+    .pd
+    .thumnail
+    img {
+    width: 100%;
+  }
+  main
+    .shop
+    .shop_container
+    .slide_wrap
+    .product_wrap
+    .product_swiper
+    .swiper-wrapper
+    .swiper-slide
+    .product
+    .shop_cart_btn {
+    top: 276px;
+  }
+  main
+    .shop
+    .shop_container
+    .slide_wrap
+    .product_wrap
+    .product_swiper
+    .swiper-wrapper
+    .swiper-slide
+    .product
+    .pd
+    > p {
+    bottom: auto;
+    top: 326px;
+  }
+}
+@media screen and (max-width: 760px) {
+  header .head_wrap nav .menu {
+    padding: 12px 0;
+  }
+  header .head_wrap .logo h1 a img {
+    width: 80%;
+  }
+}
