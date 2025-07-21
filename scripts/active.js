@@ -12,7 +12,7 @@ const langBtn = document.querySelector('#lang_btn');
 const langOption = document.querySelector('.lang_wrap .lang_select');
 const langOptionText = document.querySelectorAll('.lang_wrap .lang_select a');
 const langArrow = document.querySelector('#lang_btn .lang_arrow');
-console.log(langBtn, langOption, langArrow, langOptionText)
+//console.log(langBtn, langOption, langArrow, langOptionText)
 
 let langBtnStatus = false;
 
@@ -33,9 +33,10 @@ langBtn.addEventListener('click',()=>{
 /* gnb 설정 */
 const gnbText = document.querySelectorAll('.head_wrap .gnb li a');
 const logoImg = document.querySelector('.logo h1 a img');
+const logo = document.querySelector('.logo h1 a');
 const headerLine = document.querySelector('.head_wrap');
 const iconImg = document.querySelectorAll('.right_wrap a img');
-console.log(gnbText, logoImg, headerLine, iconImg);
+////console.log(logo, gnbText, logoImg, headerLine, iconImg);
 const header = document.querySelector('header');
 
 gnbText.forEach((gnbTextAdd)=>{
@@ -47,8 +48,8 @@ gnbText.forEach((gnbTextAdd)=>{
     })
     /* 스크롤 위치에 따른 헤더 색상 반전 */
     window.addEventListener('scroll',()=>{
-        console.log(window.scrollY);
-        if (window.scrollY > 990) {
+        //console.log(window.scrollY);
+        if (window.scrollY > 877) {
             gnbTextAdd.style.color = '#000';
             logoImg.src = './images/logo_b.png';
             headerLine.style.borderBottom = '1px solid #000';
@@ -77,11 +78,34 @@ gnbText.forEach((gnbTextAdd)=>{
     });
 });
 /* 헤더 스크롤 이벤트 */
+const sectionAll = document.querySelectorAll('main > section');
+gnbText.forEach((obj, idx)=>{
+    obj.addEventListener('click',()=>{
+        if (idx >= 2) {
+            const idxM = idx + 1;
+            window.scrollTo({
+                top: sectionAll[idxM].offsetTop,
+                behavior: 'smooth',
+            })
+        } else {
+            window.scrollTo({
+                top: sectionAll[idx].offsetTop,
+                behavior: 'smooth',
+            })
+        }
+    })
+})
+logo.addEventListener('click',()=>{
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    })
+})
 
-/* filter 그라디언트 */
+/* shop filter 그라디언트 */
 const defaultFilter = document.querySelectorAll('.filter li a');
 const filter = document.querySelector('.filter');
-console.log(defaultFilter, filter);
+//console.log(defaultFilter, filter);
 
 defaultFilter.forEach((filterActive)=>{
     filterActive.addEventListener('click',()=>{
@@ -140,7 +164,7 @@ function gradientText(){
 }
 /* 제품 정렬 기준 */
 const productAlign = document.querySelectorAll('.right_category a');
-console.log(productAlign);
+//console.log(productAlign);
 productAlign.forEach((alignFilter)=>{
     alignFilter.addEventListener('click',()=>{
         productAlign.forEach((remove)=>{

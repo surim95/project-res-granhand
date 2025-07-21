@@ -65,7 +65,7 @@ header .head_wrap .right_wrap .lang_wrap #lang_btn img:nth-child(1) {}
 header .head_wrap .right_wrap .lang_wrap #lang_btn img:nth-child(2) {}
 header .head_wrap .right_wrap .lang_wrap .lang_select {
     display: none; flex-flow: column nowrap;
-    position: absolute; top: 100; left: 0; transform: translateY(10px);
+    position: absolute; top: 100; right: 0; transform: translateY(10px);
     background: rgba(0, 0, 0, 0.8);
     border: 1px solid #fff;
     padding: 0 12px 12px;
