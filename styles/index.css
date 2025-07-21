@@ -325,7 +325,9 @@ main .journal .journal_wrap .journal_filter li.journal_act a{
     color: #000; font-size: 1.375rem; line-height: 1;
     text-decoration: underline; font-weight: 600;
 }
-main .journal .journal_wrap .journal_contents{}
+main .journal .journal_wrap .journal_contents{
+    height: 648px;;
+}
 main .journal .journal_wrap .journal_contents .journal_img{
     width: 55.6%;
     overflow: visible;
@@ -335,7 +337,12 @@ main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper{}
 main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .swiper-slide{
     display: flex;
     background: #FDFBF4;
+    height: 596px;
 }
+/* journal slide 개별 */
+main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .slide1{}
+main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .slide2{}
+main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .slide3{}
 main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .swiper-slide > a {}
 main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .swiper-slide > a img{}
 main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .swiper-slide .journal_title {
