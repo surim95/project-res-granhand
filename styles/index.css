@@ -326,18 +326,17 @@ main .journal .journal_wrap .journal_filter li.journal_act a{
     text-decoration: underline; font-weight: 600;
 }
 main .journal .journal_wrap .journal_contents{
-    height: 648px;;
+    height: 648px;
 }
 main .journal .journal_wrap .journal_contents .journal_img{
-    width: 55.6%;
+    width: 55.6%; 
     overflow: visible;
-    position: relative;
 }
-main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper{}
+main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper{
+}
 main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .swiper-slide{
-    display: flex;
+    display: flex; height: 596px;
     background: #FDFBF4;
-    height: 596px;
 }
 /* journal slide 개별 */
 main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .slide1{}
@@ -369,7 +368,7 @@ main .journal .journal_wrap .journal_contents .journal_img .swiper-wrapper .swip
 main .journal .journal_wrap .journal_contents .journal_img .swiper-button-prev{
     width: 50px; height: 50px;
     background: url(../images/icon_50_arrow.png) center / cover;
-    transform: scaleX(-1) translateX(80px);
+    transform: scaleX(-1) translateX(120px);
     filter: invert(0.6);
 }
 main .journal .journal_wrap .journal_contents .journal_img .swiper-button-next{

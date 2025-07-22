@@ -4,6 +4,8 @@ const productSwiper = new Swiper ('.product_swiper',{
     spaceBetween:40,
     direction: 'vertical',
     loop:true,
+    grabCursor: true,
+    mousewheel: true, //마우스휠 활성화
     navigation:{
         nextEl:'.product_wrap > .swiper-button-next',
     },
@@ -16,6 +18,7 @@ const setSwiper = new Swiper ('.set_swiper',{
     //autoplay:{delay:10000},
     slidesPerView:'auto',
     spaceBetween: 80,
+    mousewheel: true,
     loop: true,
     navigation:{
         nextEl:'.set_slide > .swiper-button-next',
@@ -24,11 +27,17 @@ const setSwiper = new Swiper ('.set_swiper',{
 })
 
 const journalSwiper = new Swiper ('.journal_img',{
-    //autoplay:{delay:10000},
+    /* autoplay:{
+        delay:3000,
+        disableOnInteraction: false,
+    }, */
     effect: 'creative',
-    slidesPerView: 1,
-    loopAdditionalSlides: 1,
-    rewind: true,
+    slidesPerView: 'auto', // 슬라이드 크기 자동
+    centeredSlides: true,
+    grabCursor: true,
+    loop: true,
+    speed: 400,
+    initialSlide: 0,  // 첫 번째 슬라이드부터 시작
     navigation:{
         nextEl:'.journal_img > .swiper-button-next',
         prevEl:'.journal_img > .swiper-button-prev',
@@ -36,19 +45,19 @@ const journalSwiper = new Swiper ('.journal_img',{
     creativeEffect: {
         limitProgress:2,
         prev: {
-            translate: [-48, 48, -2],
-            opacity:0.3,
+            translate: ['-7%', '7%', -100],
+            opacity:0.6,
         },
         next: {
-            translate: [-24, 24, -1],
+            translate: ['7%', '7%', -200],
             opacity:0.6,
         },
     },
     on: {
-        slideChange: function () {
-            console.log(this.realIndex);
+        slideChange: function(){
+
         }
-    },
+    }
 })
 
 const indexSwiper = new Swiper ('.index_contents', {
