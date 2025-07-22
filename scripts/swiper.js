@@ -53,11 +53,11 @@ const journalSwiper = new Swiper ('.journal_img',{
             opacity:0.6,
         },
     },
-    on: {
+    /* on: {
         slideChange: function(){
-
+            console.log(this.realIndex);
         }
-    }
+    } */
 })
 
 const indexSwiper = new Swiper ('.index_contents', {
