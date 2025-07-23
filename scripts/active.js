@@ -70,16 +70,34 @@ gnbText.forEach((gnbTextAdd)=>{
             langOption.style.border = '1px solid #fff';
             langOptionText.forEach((langText)=>{langText.style.color = '#fff';})
         }
-        if ((window.scrollY > 1720 && window.scrollY < 2643)) {
+        if ((window.scrollY > 1720 && window.scrollY < 2643 || window.scrollY > 4794 && window.scrollY < 5357)) {
             header.style.display = 'none';
-        } else if ((window.scrollY < 1720 || window.scrollY > 2643)) {
+        } else {
             header.style.display = 'block';
         };
     });
 });
 /* 헤더 스크롤 이벤트 */
 const sectionAll = document.querySelectorAll('main > section');
+const storeGnb = document.querySelectorAll('.store_gnb > a');
+//console.log(sectionAll, storeGnb);
 gnbText.forEach((obj, idx)=>{
+    obj.addEventListener('click',()=>{
+        if (idx >= 2) {
+            const idxM = idx + 1;
+            window.scrollTo({
+                top: sectionAll[idxM].offsetTop,
+                behavior: 'smooth',
+            })
+        } else {
+            window.scrollTo({
+                top: sectionAll[idx].offsetTop,
+                behavior: 'smooth',
+            })
+        }
+    })
+})
+storeGnb.forEach((obj, idx)=>{
     obj.addEventListener('click',()=>{
         if (idx >= 2) {
             const idxM = idx + 1;
