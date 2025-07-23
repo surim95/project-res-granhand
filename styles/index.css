@@ -465,13 +465,14 @@ main .store >p {
     z-index: -1; left: 0; top: 0;
     font-size: 8.75rem; font-weight: 600;
     color: #d4d4d4;
+    opacity: 0.8;
 }
 main .store .store_wrap {}
 main .store_wrap .store_container {
     width: 100%;
 }
 main .store_wrap .store_container .list {
-    position: relative; margin-left: 80px; top: 240px;
+    position: relative; margin-left: 80px; top: 300px;
 }
 main .store_wrap .store_container .list .store_list {
     margin-bottom: 80px;
