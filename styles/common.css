@@ -1,5 +1,6 @@
 body {
-    width: 100%;
+    max-width: 100%;
+    min-width: 1690px;
     position: relative;
 }
 body * {
@@ -116,6 +117,7 @@ footer .foot_wrap .com_info .wrap .bottom_left{
 }
 footer .foot_wrap .com_info  .wrap .bottom_left > p {
     font-size: 0.875rem; color: #000; margin-right: 18px;
+    text-align: left;
 }
 footer .foot_wrap .com_info  .wrap .bottom_left > p:last-child{
     margin-right: 0;
