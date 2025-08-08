@@ -626,6 +626,9 @@ main .index .index_wrap .index_contents .swiper-wrapper .swiper-slide a .perfume
     line-height: 1.4;
     text-align: left;
 }
+main .index .index_wrap .index_contents .swiper-wrapper .swiper-slide a .perfume_note em {
+    font-weight: 500;
+}
 main .index .index_wrap .index_contents .swiper-wrapper .swiper-slide a .perfume_note::after {
     content: ''; display: inline-block;
     width: 100%; height: 1px;

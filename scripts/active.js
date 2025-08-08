@@ -246,7 +246,7 @@ wallPaperFront.forEach((paper)=>{
         paperOver.style.transform = 'scale(1)';
     })
 })
-
+/* journal 필터 */
 const journalFilter = document.querySelectorAll('.journal_filter li');
 for(let i of journalFilter){
     i.addEventListener('click',()=>{
@@ -256,12 +256,42 @@ for(let i of journalFilter){
         i.classList.add('journal_act');
     })
 }
+/* index 필터 */
 const indexFilter = document.querySelectorAll('.index_filter li');
-for(let i of indexFilter){
+const indexSwiperWrap = document.querySelector('.index_contents .swiper-wrapper');
+/* index 필터링 */
+const indexSignature = document.querySelectorAll('.index_contents .signature');
+const indexPerfume = document.querySelectorAll('.index_contents .perfume');
+const indexFragrances = document.querySelectorAll('.index_contents .fragrances');
+const indexNatural = document.querySelectorAll('.index_contents .natural');
+//console.log(indexSignature, indexPerfume, indexFragrances, indexNatural);
+indexFilter.forEach((i, idx)=>{
     i.addEventListener('click',()=>{
         indexFilter.forEach((filter)=>{
             filter.classList.remove('index_act');
         })
         i.classList.add('index_act');
+        allRemove();
+        if (idx === 0) {
+            indexSignature.forEach(obj => indexSwiperWrap.appendChild(obj));
+            indexPerfume.forEach(obj => indexSwiperWrap.appendChild(obj));
+            indexFragrances.forEach(obj => indexSwiperWrap.appendChild(obj));
+            indexNatural.forEach(obj => indexSwiperWrap.appendChild(obj));
+        } else if (idx === 1) {
+            indexSignature.forEach(obj => indexSwiperWrap.appendChild(obj));
+        } else if (idx === 2) {
+            indexPerfume.forEach(obj => indexSwiperWrap.appendChild(obj));
+        } else if (idx === 3) {
+            indexFragrances.forEach(obj => indexSwiperWrap.appendChild(obj));
+        } else {
+            indexNatural.forEach(obj => indexSwiperWrap.appendChild(obj));
+        }
+        indexSwiper.update();
     })
+})
+function allRemove(){
+    indexSignature.forEach(obj=>obj.remove());
+    indexPerfume.forEach(obj=>obj.remove());
+    indexFragrances.forEach(obj=>obj.remove());
+    indexNatural.forEach(obj=>obj.remove());
 }
