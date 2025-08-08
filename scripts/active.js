@@ -130,10 +130,12 @@ const productPerfume = document.querySelectorAll('.product_swiper .prefume');
 const productFragrance = document.querySelectorAll('.product_swiper .fragrance');
 const productBody = document.querySelectorAll('.product_swiper .body');
 const productNatural = document.querySelectorAll('.product_swiper .natural');
-//console.log(productPerfume, productFragrance, productBody, productNatural, productWrap);
-productFragrance.forEach(obj=>obj.style.display = 'none');
-productBody.forEach(obj=>obj.style.display = 'none');
-productNatural.forEach(obj=>obj.style.display = 'none');
+const productTool = document.querySelectorAll('.product_swiper .tool');
+const productKomfor = document.querySelectorAll('.product_swiper .komfor');
+//console.log(productPerfume, productFragrance, productBody, productNatural, productTool, productKomfor, productWrap);
+/* 기본값 설정 */
+productHide();
+productPerfume.forEach(obj=>obj.style.display = 'flex');
 
 defaultFilter.forEach((filterActive, idx)=>{
     filterActive.addEventListener('click',()=>{
@@ -142,8 +144,8 @@ defaultFilter.forEach((filterActive, idx)=>{
         })
         filterActive.classList.add('active_filter');
         gradientText();
+        productHide();
         productSwiper.slideTo(0);
-        productHide()
         if (idx === 0) {
             productPerfume.forEach(obj=>obj.style.display = 'flex');
         } else if (idx === 1) {
@@ -152,6 +154,10 @@ defaultFilter.forEach((filterActive, idx)=>{
             productBody.forEach(obj=>obj.style.display = 'flex');
         } else if (idx === 3) {
             productNatural.forEach(obj=>obj.style.display = 'flex');
+        } else if (idx === 4) {
+            productTool.forEach(obj=>obj.style.display = 'flex');
+        } else {
+            productKomfor.forEach(obj=>obj.style.display = 'flex');
         }
         productSwiper.update();
     })
@@ -161,6 +167,8 @@ function productHide(){
     productFragrance.forEach(obj=>obj.style.display = 'none');
     productBody.forEach(obj=>obj.style.display = 'none');
     productNatural.forEach(obj=>obj.style.display = 'none');
+    productTool.forEach(obj=>obj.style.display = 'none');
+    productKomfor.forEach(obj=>obj.style.display = 'none');
 }
 /* 그라디언트 함수 */
 function gradientText(){

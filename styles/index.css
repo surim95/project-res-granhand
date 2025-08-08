@@ -167,10 +167,17 @@ main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wra
     font-size: 0.75rem; text-decoration: underline;
     color: #4d4d4d;
 }
+/* 퍼퓸노트 natural */
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .natural .product .perfume_note_btn img {
+    filter: invert(1);
+}
+main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .natural .product .perfume_note_btn span {
+    color: #d4d4d4;
+}
 /* 퍼퓸노트 시작 */
 main .shop .shop_container .slide_wrap .product_wrap .product_swiper .swiper-wrapper .swiper-slide .product .perfume_note {
     position: absolute; left: 10px; top: 26px; right: 10px;
-    background: rgba(253,251,244, 0.8) ;
+    background: #FDFBF4;
     padding: 8px;
     border: 1px solid #4d4d4d;
     display: none;
