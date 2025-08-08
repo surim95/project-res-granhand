@@ -124,17 +124,45 @@ logo.addEventListener('click',()=>{
 const defaultFilter = document.querySelectorAll('.filter li a');
 const filter = document.querySelector('.filter');
 //console.log(defaultFilter, filter);
+/* shop product필터 */
+const productWrap = document.querySelector('.product_swiper .swiper-wrapper');
+const productPerfume = document.querySelectorAll('.product_swiper .prefume');
+const productFragrance = document.querySelectorAll('.product_swiper .fragrance');
+const productBody = document.querySelectorAll('.product_swiper .body');
+const productNatural = document.querySelectorAll('.product_swiper .natural');
+//console.log(productPerfume, productFragrance, productBody, productNatural, productWrap);
+productFragrance.forEach(obj=>obj.style.display = 'none');
+productBody.forEach(obj=>obj.style.display = 'none');
+productNatural.forEach(obj=>obj.style.display = 'none');
 
-defaultFilter.forEach((filterActive)=>{
+defaultFilter.forEach((filterActive, idx)=>{
     filterActive.addEventListener('click',()=>{
         defaultFilter.forEach((del)=>{
             del.classList.remove('active_filter');
         })
-        filterActive.classList.toggle('active_filter');
+        filterActive.classList.add('active_filter');
         gradientText();
+        productSwiper.slideTo(0);
+        productHide()
+        if (idx === 0) {
+            productPerfume.forEach(obj=>obj.style.display = 'flex');
+        } else if (idx === 1) {
+            productFragrance.forEach(obj=>obj.style.display = 'flex');
+        } else if (idx === 2) {
+            productBody.forEach(obj=>obj.style.display = 'flex');
+        } else if (idx === 3) {
+            productNatural.forEach(obj=>obj.style.display = 'flex');
+        }
+        productSwiper.update();
     })
 })
-
+function productHide(){
+    productPerfume.forEach(obj=>obj.style.display = 'none');
+    productFragrance.forEach(obj=>obj.style.display = 'none');
+    productBody.forEach(obj=>obj.style.display = 'none');
+    productNatural.forEach(obj=>obj.style.display = 'none');
+}
+/* 그라디언트 함수 */
 function gradientText(){
     if (defaultFilter[0].classList.contains('active_filter')){
         filter.classList.add('filter_gradient1');
@@ -271,7 +299,7 @@ indexFilter.forEach((i, idx)=>{
             filter.classList.remove('index_act');
         })
         i.classList.add('index_act');
-        allRemove();
+        indexAllRemove();
         if (idx === 0) {
             indexSignature.forEach(obj => indexSwiperWrap.appendChild(obj));
             indexPerfume.forEach(obj => indexSwiperWrap.appendChild(obj));
@@ -289,7 +317,7 @@ indexFilter.forEach((i, idx)=>{
         indexSwiper.update();
     })
 })
-function allRemove(){
+function indexAllRemove(){
     indexSignature.forEach(obj=>obj.remove());
     indexPerfume.forEach(obj=>obj.remove());
     indexFragrances.forEach(obj=>obj.remove());

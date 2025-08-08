@@ -3,7 +3,7 @@ const productSwiper = new Swiper ('.product_swiper',{
     slidesPerView:1,
     spaceBetween:40,
     direction: 'vertical',
-    loop:true,
+    loop: true,
     grabCursor: true,
     mousewheel: true, //마우스휠 활성화
     navigation:{
