@@ -15,20 +15,26 @@ const langArrow = document.querySelector('#lang_btn .lang_arrow');
 //console.log(langBtn, langOption, langArrow, langOptionText)
 
 let langBtnStatus = false;
-
+/* 언어 선택 창 활성화 / 비활성화 */
 langBtn.addEventListener('click',()=>{
     if (langBtnStatus) {
         langOption.style.display = 'none';
         langBtnStatus = false;
         langArrow.style.transform = 'scaleY(1)';
-        
     } else {
         langOption.style.display = 'flex';
         langBtnStatus = true;
         langArrow.style.transform = 'scaleY(-1)';
     }
 })
-
+/* 언어 선택 시 언어 선택 창 비활성화 */
+for (let i of langOptionText){
+    i.addEventListener('click',()=>{
+        langOption.style.display = 'none';
+        langBtnStatus = false;
+        langArrow.style.transform = 'scaleY(1)';
+    })
+}
 
 /* gnb 설정 */
 const gnbText = document.querySelectorAll('.head_wrap .gnb li a');
