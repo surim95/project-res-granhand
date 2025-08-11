@@ -27,7 +27,7 @@ const setSwiper = new Swiper ('.set_swiper',{
 
 const journalSwiper = new Swiper ('.journal_img',{
     /* autoplay:{
-        delay:3000,
+        delay:1500,
         disableOnInteraction: false,
     }, */
     effect: 'creative',
